@@ -1,0 +1,12 @@
+accelerate
+decord
+gradio==4.44.1
+gradio-client
+matplotlib
+numpy
+onnxruntime-gpu
+opencv-python
+Pillow
+scikit-learn
+torch
+transformers
