@@ -1,0 +1,40 @@
+{
+  "tsinghua": {
+    "recommended": "tsinghua-emblem-official.svg",
+    "source": "https://www.env.tsinghua.edu.cn/qinghuadaxueerjidanweibiaozhiguifanshouce-shixing.pdf",
+    "source_page": 4,
+    "format": "SVG vector path",
+    "viewBox": [
+      0,
+      0,
+      54.82,
+      54.82
+    ],
+    "derivation": "Exact emblem path extracted from official PDF via MuPDF; isolated SVG path retains original geometry and converted source color. No generated logo or tracing.",
+    "fallback": "tsinghua-emblem-official-2048.png",
+    "bytes": 132138,
+    "sha256": "f77dbf05ae8d7408eef9ce556d3e30f7334a1d27e9a0571401cea204e6e5f5d9",
+    "fallback_rendering": "2048 square transparent PNG rendered from isolated exact vector path with librsvg."
+  },
+  "huawei": {
+    "recommended": "huawei-favicon-official.svg",
+    "source": "https://www.huawei.com/-/media/htemplate-home/1.0.1.20251205144752/components/assets/img/favicon-logo.svg",
+    "format": "SVG vector",
+    "viewBox": [
+      0,
+      0,
+      66.77,
+      66.77
+    ],
+    "derivation": "Unmodified official homepage favicon asset contains full vertical corporate flower and wordmark.",
+    "inline_style_variant": "huawei-logo-official.svg",
+    "fallback": "huawei-logo-official-1024.png",
+    "bytes": 3315,
+    "sha256": "18c6f80d423c1b1e01e4a6e02f66e1375567fd909de1af55c8013430a504126d",
+    "fallback_rendering": "1024 square transparent PNG rendered from the unmodified SVG with librsvg; full flower gradient and black wordmark verified."
+  },
+  "notes": [
+    "Preserve aspect ratio and official colors. Use white background and substantial clear space. The Huawei partner branding PDF specifies 0.35 times symbol height minimum clear space.",
+    "Huawei official co-brand guideline source: https://e.huawei.com/marketingcloud/pep/asset/20000001/Material/45de3cd25cc4490ca407764f37c3a262/M3T1A669N1101884873329614975/03_%20Partner%20Co-Branding%20Guidelines%20V1_0.pdf"
+  ]
+}

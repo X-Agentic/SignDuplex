@@ -1,109 +1,119 @@
 <p align="center">
-  <img src="docs/assets/hero.png" alt="SignDuplex — Tsinghua University × Huawei. Real-time full-duplex interaction for sign language." width="100%">
+  <a href="docs/assets/brand-banner.svg"><img src="docs/assets/brand-banner.svg" alt="Tsinghua University × Huawei Technologies" width="100%"></a>
 </p>
 
+<h1 align="center">SignDuplex</h1>
 <h3 align="center">A Full-Duplex Interaction Controller for<br>Real-Time Sign Language Communication</h3>
 
 <p align="center">
-  Yuxuan Wang<sup>1</sup> · Jiasheng Lu<sup>2,*</sup> · Ruiqing Yin<sup>2</sup> · Keyu Fan<sup>2</sup>
-  <br>
-  <sup>1</sup>Tsinghua University &nbsp;&nbsp; <sup>2</sup>Huawei Technologies
+  Yuxuan Wang<sup>1</sup> · Jiasheng Lu<sup>2,*</sup> · Ruiqing Yin<sup>2</sup> · Keyu Fan<sup>2</sup><br>
+  <sup>1</sup>Tsinghua University, Beijing, China &nbsp; · &nbsp; <sup>2</sup>Huawei Technologies, China
 </p>
 
 <p align="center">
-  <a href="docs/paper/SignDuplex.pdf"><b>Read the Paper ↗</b></a> &nbsp; / &nbsp;
-  <a href="#how-it-works">Method</a> &nbsp; / &nbsp;
+  <a href="docs/paper/SignDuplex.pdf"><b>Paper ↗</b></a> &nbsp; / &nbsp;
+  <a href="https://signduplex-demo.brown-charm-3727.chatgpt.site/#demo"><b>Demo ↗</b></a> &nbsp; / &nbsp;
+  <a href="#method">Method</a> &nbsp; / &nbsp;
   <a href="#results">Results</a> &nbsp; / &nbsp;
-  <a href="#signturn-dataset">SignTurn</a> &nbsp; / &nbsp;
-  <a href="#getting-started">Get Started</a>
+  <a href="#signturn">SignTurn</a> &nbsp; / &nbsp;
+  <a href="#citation">Citation</a>
 </p>
 
 ---
 
-**Good interaction depends on knowing when to respond.** SignDuplex is a plug-and-play controller that observes continuous signing, recognizes interaction events, and decides when a system should keep receiving input, generate a response, or stop its current output. It models **interaction timing** independently of downstream translation and response generation.
+**Knowing when to respond is part of understanding signing.** SignDuplex observes continuous visual input, recognizes five interaction events, and controls when a system keeps receiving, takes the turn, or stops its output. Its plug-and-play design separates interaction timing from downstream translation and response generation.
 
 <table>
   <tr>
-    <td align="center" width="25%"><h3>94.99%</h3>Event recognition accuracy</td>
-    <td align="center" width="25%"><h3>433.46 ms</h3>Mean end-to-end prediction</td>
-    <td align="center" width="25%"><h3>+67.3%</h3>Continuous-input BLEU-4</td>
-    <td align="center" width="25%"><h3>−60.4%</h3>First submission time</td>
+    <td align="center" width="50%"><h3>94.99%</h3>Overall event recognition accuracy</td>
+    <td align="center" width="50%"><h3>433.46 ms</h3>Mean event-prediction latency</td>
+  </tr>
+  <tr>
+    <td align="center"><h3>+67.3%</h3>Continuous-input BLEU-4</td>
+    <td align="center"><h3>−60.4%</h3>Continuous-input first submission time</td>
   </tr>
 </table>
 
-<sub>Reported in the accompanying paper. Recognition is evaluated on SignTurn; mean prediction latency is reported on an NVIDIA RTX 4090. Translation gains compare continuous multi-sentence input with whole-video offline submission using the same Uni-Sign translator. First submission time measures delivery of a video segment to the translator.</sub>
+<sub>Paper-reported results. Recognition is evaluated on SignTurn; prediction latency is measured on an NVIDIA RTX 4090. Translation gains compare SignDuplex with whole-video offline submission using the same Uni-Sign translator. First submission time ends when a valid video segment reaches the translator.</sub>
 
-> **Release status:** This homepage presents the final paper. The currently released code contains the earlier **V1.8 model and V3.7.0 demo**; the paper's unified five-class Qwen3 implementation, SignTurn data, and model weights are pending release. See [Getting started](#getting-started) for the available implementation.
+## Demo
 
-## How it works
+**[Open the interactive demo ↗](https://signduplex-demo.brown-charm-3727.chatgpt.site/#demo)**
+
+Explore the five interaction events and the two-state controller in an interactive illustration. Recorded signing demos will be added here.
+
+## Method
+
+<sub>Click any figure to open the full-size vector artwork.</sub>
 
 <p align="center">
-  <img src="docs/assets/interaction.png" alt="Causal RGB and pose prefixes are combined with the system state. A five-class event predictor routes the system to keep receiving, generate a response, or stop output." width="100%">
+  <a href="docs/assets/method-overview.svg"><img src="docs/assets/method-overview.svg" alt="SignDuplex combines observed RGB and pose with the system state to predict five interaction events and control receiving, responding, and interruption." width="100%"></a>
 </p>
 
-**Two complementary visual pathways.** RGB captures appearance, facial expression, and gaze; pose captures temporal motion. Their tokens are combined with a system-state token and passed to Qwen3-0.6B with LoRA and a unified interaction-event head.
+**Appearance + motion + system state.** SigLIP and a visual resampler encode RGB appearance; RTMPose and ST-GCN provide temporal pose features through a Temporal Adapter and Projector. RGB, pose, and state tokens are combined in Qwen3-0.6B with LoRA and a unified five-class prediction head.
 
-**Continuous perception in both states.** The controller updates every second using only the observed prefix since the latest state transition. Visual perception continues while the system responds, so a new signed utterance can interrupt ongoing output.
+**Continuous perception, every second.** Each prediction uses the video and pose observed since the latest state transition. Accumulation restarts at a transition, and visual perception continues in both **RECEIVING** and **RESPONDING**.
 
-| Event | What it means | Controller behavior |
+| Event | Meaning | State-conditioned action |
 | :--- | :--- | :--- |
-| **REJECT** | Non-signing movement or a brief backchannel that needs no response | Keep receiving |
-| **INCOMPLETE** | A valid signed utterance is still in progress | Keep receiving |
-| **WAIT** | A brief pause or posture hold within an unfinished utterance | Keep receiving |
-| **COMPLETE** | The user has finished the current utterance | Switch to responding; submit the segment |
-| **BARGE** | The user starts a new valid utterance during system output | Stop output; switch to receiving |
+| **REJECT** | Non-signing movements or brief backchannels that require no response | In RECEIVING, keep receiving |
+| **INCOMPLETE** | A valid signed utterance is still in progress | In RECEIVING, keep receiving |
+| **WAIT** | Brief deceleration, a posture hold, or a pause within an unfinished utterance | In RECEIVING, keep receiving |
+| **COMPLETE** | The user has finished the current utterance and will not continue within this turn | In RECEIVING, submit the segment and switch to RESPONDING |
+| **BARGE** | The user begins a new valid utterance during system output | In RESPONDING, stop output and switch to RECEIVING |
 
-In `RESPONDING`, non-BARGE events keep the system responding. In `RECEIVING`, `COMPLETE` initiates the downstream response. These are the **paper's** event definitions; the [legacy implementation](docs/architecture.md) uses a different routed prediction contract.
-
-<details>
-<summary><b>View the model architecture from the paper</b></summary>
-
-<p align="center">
-  <img src="docs/assets/paper-architecture.png" alt="Paper Figure 3: frozen SigLIP, resampler and ST-GCN; trainable temporal adapter, projector, state embedding, Qwen3 LoRA and unified classification head." width="100%">
-</p>
-
-The SigLIP encoder, visual resampler, and ST-GCN encoder remain frozen. Training updates the Temporal Adapter, Projector, State Embedding, Qwen3 LoRA, and classification head. See Section 3 of the [paper](docs/paper/SignDuplex.pdf) for the complete formulation.
-
-</details>
+In RESPONDING, every non-BARGE event keeps the system responding. See Sections 3.1–3.3 of the [paper](docs/paper/SignDuplex.pdf) for the event definitions and model formulation.
 
 ## Results
 
+**One translator, different submission strategies.** The downstream study uses the same Uni-Sign model for every strategy and evaluates original How2Sign sentences and continuous videos formed by concatenating multiple sentences.
+
 <p align="center">
-  <img src="docs/assets/results.png" alt="Continuous-input results: SignDuplex achieves BLEU-4 of 13.72 versus 8.20 offline, and first submission at 5.99 seconds versus 15.11 seconds offline." width="100%">
+  <a href="docs/assets/results-quality.svg"><img src="docs/assets/results-quality.svg" alt="Continuous-input BLEU-4: offline 8.20, SL Segmentation 11.85, Online CSLR/SLT 10.90, SignDuplex 13.72, and original-boundary reference 14.38." width="100%"></a>
+</p>
+<p align="center">
+  <a href="docs/assets/results-latency.svg"><img src="docs/assets/results-latency.svg" alt="Continuous-input first submission time: offline 15.11 seconds, SL Segmentation 6.48, Online CSLR/SLT 6.26, SignDuplex 5.99, and original-boundary reference 5.91." width="100%"></a>
 </p>
 
-All strategies below use the **same Uni-Sign translation model**. Only the segment submission strategy changes. Results are transcribed from Table 4 of the [paper](docs/paper/SignDuplex.pdf).
-
-| Submission strategy | Single sentence<br>BLEU-4 ↑ | Continuous input<br>BLEU-4 ↑ | Single sentence<br>First submission (s) ↓ | Continuous input<br>First submission (s) ↓ |
-| :--- | ---: | ---: | ---: | ---: |
-| Offline translation | 14.50 | 8.20 | 5.80 | 15.11 |
-| SL Segmentation | 13.70 | 11.85 | 6.12 | 6.48 |
-| Online CSLR/SLT | 12.80 | 10.90 | 5.98 | 6.26 |
-| **SignDuplex** | **14.15** | **13.72** | **5.86** | **5.99** |
-| Original (Reference) | 14.50 | 14.38 | 5.80 | 5.91 |
-
-<sub>Original (Reference) uses ground-truth sentence boundaries as an ideal-boundary reference. First submission time is measured from the first video frame to submission of the first valid segment; it does not include the subsequent translation or speech generation time. The segmentation and online baselines are adapted to How2Sign as described in Section 4.3.</sub>
-
 <details>
-<summary><b>Interaction recognition and modality ablation</b></summary>
+<summary><b>Translation quality and first submission time · Table 4</b></summary>
 
-Per-class recognition accuracies reported in Tables 1 and 3:
+Values are **single sentence / continuous multi-sentence input**.
 
-| Visual input | REJECT | INCOMPLETE | WAIT | COMPLETE | BARGE |
-| :--- | ---: | ---: | ---: | ---: | ---: |
-| RGB only | 93.44% | 89.04% | 89.86% | 91.10% | 88.67% |
-| Pose only | 92.34% | 92.16% | 87.92% | 94.79% | 93.33% |
-| **RGB + Pose** | **96.88%** | **93.52%** | **93.06%** | **97.53%** | **96.00%** |
+| Submission strategy | BLEU-4 ↑ | First submission (s) ↓ |
+| :--- | ---: | ---: |
+| Offline Translation | 14.50 / 8.20 | 5.80 / 15.11 |
+| SL Segmentation | 13.70 / 11.85 | 6.12 / 6.48 |
+| Online CSLR/SLT | 12.80 / 10.90 | 5.98 / 6.26 |
+| **SignDuplex** | **14.15 / 13.72** | **5.86 / 5.99** |
+| Original (Reference) | 14.50 / 14.38 | 5.80 / 5.91 |
 
-The paper reports **94.99% overall accuracy**, weighted by the number of test samples in each event class, and **433.46 ms** mean end-to-end event-prediction latency.
+Original (Reference) uses ground-truth sentence boundaries. First submission time runs from the first video frame to the first valid segment submitted to the translation model; subsequent translation and speech generation are outside this metric. The segmentation and online baselines are adapted to How2Sign as described in Section 4.3.
 
 </details>
 
-## SignTurn dataset
+<details>
+<summary><b>Event recognition and modality ablation · Tables 1 and 3</b></summary>
 
-**263,890 interaction-event samples · 57.6 hours · five event classes**
+| Method | REJECT | INCOMPLETE | WAIT | COMPLETE | BARGE | Mean E2E (ms) ↓ |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: |
+| SignDuplex | 96.88% | 93.52% | 93.06% | 97.53% | 96.00% | 433.46 |
 
-SignTurn combines ASL dialogue corpora—MoLo, O5S5, and LING BING—with sentence-level How2Sign data. The paper describes a visual–semantic construction pipeline for training data and separately recorded, manually annotated conversations for the test set.
+| Visual input | REJECT | INCOMPLETE | WAIT | COMPLETE | BARGE |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| RGB-only | 93.44% | 89.04% | 89.86% | 91.10% | 88.67% |
+| Pose-only | 92.34% | 92.16% | 87.92% | 94.79% | 93.33% |
+| **RGB+Pose** | **96.88%** | **93.52%** | **93.06%** | **97.53%** | **96.00%** |
+
+Class accuracies are weighted by their test sample counts to obtain **94.99% overall accuracy**. Mean E2E latency covers video input through completion of event prediction on an NVIDIA RTX 4090.
+
+</details>
+
+## SignTurn
+
+**263,890 interaction-event samples · 57.6 hours · five events**
+
+SignTurn draws on MoLo, O5S5, LING BING, and How2Sign. Training samples are built through a visual–semantic pipeline that combines dialogue annotations, hand-motion candidates, semantic verification, and training-only augmentation. The independent test set consists of recorded face-to-face conversations with manually annotated events.
 
 | Event | Training samples | Test samples | Duration (h) |
 | :--- | ---: | ---: | ---: |
@@ -114,50 +124,9 @@ SignTurn combines ASL dialogue corpora—MoLo, O5S5, and LING BING—with senten
 | BARGE | 6,350 | 150 | 1.9 |
 | **Total** | **260,400** | **3,490** | **57.6** |
 
-Dataset statistics follow Table 2. **The SignTurn download is pending release.** Source-corpus access remains subject to each provider's terms.
+<sub>Dataset statistics from Table 2; construction and test annotation are described in Section 3.4.</sub>
 
-## Getting started
-
-The available implementation is the **V1.8 model with the V3.7.0 Gradio demo**. Its state-conditioned, factorized prediction heads differ from the final paper's unified five-class model. Use the [implementation guide](docs/legacy-implementation.md) for training, evaluation, data construction, and runtime behavior.
-
-```bash
-git clone https://github.com/X-Agentic/SignDuplex.git
-cd SignDuplex
-python -m venv .venv
-. .venv/bin/activate
-pip install -r requirements.txt
-```
-
-Use Python 3.10 and a CUDA-capable PyTorch environment. The demo additionally requires local **MiniCPM-o-4.5**, **Uni-Sign**, and the **V1.8 checkpoint**. The checkpoint download is pending release; see [weight placement instructions](checkpoints/README.md). Configure external model paths through [configs/env.example](configs/env.example).
-
-<details>
-<summary><b>Launch the legacy demo with local dependencies</b></summary>
-
-Place the checkpoint at `checkpoints/signduplex_v1_8.pt`, then run:
-
-```bash
-python scripts/demo.py \
-  --minicpm-dir /path/to/MiniCPM-o-4_5 \
-  --unisign-dir /path/to/Uni-Sign
-```
-
-The released demo includes visual state tracking, interruption handling, reference subtitles, and simulated speech playback. For full commands, see the [implementation guide](docs/legacy-implementation.md).
-
-</details>
-
-<details>
-<summary><b>Repository map</b></summary>
-
-```text
-signduplex/   Legacy V1.8 training and model implementation
-demo/         V3.7.0 Gradio demo and interaction controller
-scripts/      Training, evaluation, demo, and data entry points
-configs/      Environment and local model path examples
-docs/         Paper, figures, and implementation documentation
-checkpoints/  Checkpoint placement instructions
-```
-
-</details>
+**Data and model release: forthcoming.**
 
 ## Citation
 
@@ -171,11 +140,3 @@ checkpoints/  Checkpoint placement instructions
   url    = {https://github.com/X-Agentic/SignDuplex}
 }
 ```
-
-## Acknowledgements
-
-SignDuplex builds on MiniCPM-o, Uni-Sign, SigLIP, RTMPose, ST-GCN, and Qwen3, and draws on the sign language resources cited in the paper. Please follow the respective model licenses and dataset terms.
-
-<p align="center">
-  <sub><b>Tsinghua University × Huawei Technologies</b><br>Continuous perception. Timely response. Natural interaction.</sub>
-</p>
