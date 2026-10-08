@@ -355,8 +355,8 @@ def results_chart(kind):
             figure.rect(32, y - 16, 976, 72,
                         "#f7eefb" if quality else "#fff0f3", radius=12)
         if reference:
-            figure.text(48, y + 24, "Ideal boundary", 28, MUTED)
-            figure.text(48, y + 55, "reference", 24, MUTED)
+            figure.text(48, y + 24, "Ideal boundary", 30, INK)
+            figure.text(48, y + 55, "reference", 30, INK)
         else:
             figure.text(48, y + 30, name, 30,
                         accent if is_ours else INK, is_ours)

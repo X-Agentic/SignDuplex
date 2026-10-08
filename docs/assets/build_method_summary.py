@@ -1,18 +1,21 @@
 """Build the compact SignDuplex paper-method SVG and its 3x PNG fallback.
 
 Run: python docs/assets/build_method_summary.py
-Requires matplotlib and CairoSVG. Edit LABELS to change native labels;
+If Times New Roman is not installed, pass --font /path/to/times.ttf.
+Requires matplotlib, CairoSVG, and Times New Roman Regular.
+Edit LABELS to change native labels;
 the exported SVG outlines the font to keep typography consistent in README.
 """
 
 from pathlib import Path
+import argparse
 import html
 import json
 import xml.etree.ElementTree as ET
 
 import cairosvg
 
-from matplotlib.font_manager import FontProperties
+from matplotlib.font_manager import FontProperties, findfont, get_font
 from matplotlib.path import Path as MplPath
 from matplotlib.textpath import TextPath
 
@@ -20,17 +23,18 @@ from matplotlib.textpath import TextPath
 ROOT = Path(__file__).resolve().parent
 WIDTH, HEIGHT, SCALE = 1000, 200, 3
 PURPLE, RED, INK, MUTED = "#702082", "#c62642", "#24182e", "#74687c"
+FONT = "Times New Roman"
 LABELS = [
     (16, 226, "RGB · Pose · State", "Causal input tokens", 23, 19, False),
-    (266, 180, "Qwen3-0.6B", "LoRA", 25, 20, True),
+    (266, 180, "Qwen3-0.6B", "LoRA", 25, 20, False),
     (470, 212, "Five-event head", "Event prediction", 23, 19, False),
     (706, 278, "Interaction controller", "Receive · Respond · Interrupt", 23, 18, False),
 ]
 
 
-def outlined_text(x, y, label, size, color, bold=False):
+def outlined_text(x, y, label, size, color, bold=False, font_file=None):
     path = TextPath((0, 0), label, prop=FontProperties(
-        family="DejaVu Sans", size=size, weight="bold" if bold else "normal"))
+        fname=font_file, family=FONT, size=size, weight="normal"))
     bounds = path.get_extents()
     tx = x - (bounds.x0 + bounds.x1) / 2
     commands = []
@@ -52,7 +56,12 @@ def outlined_text(x, y, label, size, color, bold=False):
                     tx + bounds.x1, y - bounds.y0]
 
 
-def build():
+def build(font_file=None):
+    font_file = font_file or findfont(
+        FontProperties(family=FONT, weight="normal"), fallback_to_default=False)
+    font = get_font(font_file)
+    if font.family_name != FONT or font.style_name != "Regular":
+        raise ValueError("The supplied font must be Times New Roman Regular.")
     body = ['<rect width="1000" height="200" fill="#fff"/>']
     bounds = []
     for index, (x, width, heading, subtitle, size, sub_size, bold) in enumerate(LABELS):
@@ -62,11 +71,11 @@ def build():
         body.append(f'<rect x="{x}" y="38" width="{width}" height="124" '
                     f'rx="14" fill="{fill}" stroke="{stroke}" stroke-width="1.6"/>')
         markup, box = outlined_text(x + width / 2, 92, heading, size,
-                                     RED if controller else INK, bold)
+                                     RED if controller else INK, bold, font_file)
         body.append(markup)
         bounds.append((heading, box, x, x + width))
         markup, box = outlined_text(x + width / 2, 127, subtitle, sub_size,
-                                     RED if controller else MUTED)
+                                     RED if controller else MUTED, font_file=font_file)
         body.append(markup)
         bounds.append((subtitle, box, x, x + width))
         if index < 3:
@@ -91,7 +100,7 @@ def build():
         "labels": [{"heading": item[2], "subtitle": item[3],
                     "heading_font_size": item[4], "subtitle_font_size": item[5]}
                    for item in LABELS],
-        "font": "DejaVu Sans, outlined vector paths",
+        "font": "Times New Roman Regular, outlined vector paths",
         "raster_scale": SCALE,
     }, ensure_ascii=False))
     svg = (
@@ -106,6 +115,7 @@ def build():
     assert not tags.intersection({"text", "image", "script", "foreignObject"})
     assert all("href" not in attr for node in root.iter() for attr in node.attrib)
     assert all(item[4] >= 23 for item in LABELS)
+    assert not any(item[6] for item in LABELS)
     for label, box, block_left, block_right in bounds:
         assert block_left + 4 < box[0] < box[2] < block_right - 4, (label, box)
         assert 38 < box[1] < box[3] < 162, (label, box)
@@ -117,10 +127,13 @@ def build():
     print(json.dumps({
         "status": "passed", "svg": str(svg_path), "png": str(png_path),
         "viewbox": [0, 0, WIDTH, HEIGHT], "png_size": [WIDTH * SCALE, HEIGHT * SCALE],
+        "font": font.family_name, "font_style": font.style_name,
         "minimum_main_font_size": min(item[4] for item in LABELS),
         "external_references": 0, "labels_in_bounds": True,
     }, indent=2))
 
 
 if __name__ == "__main__":
-    build()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--font", help="Path to the Times New Roman Regular font file")
+    build(parser.parse_args().font)
