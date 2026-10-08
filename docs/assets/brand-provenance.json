@@ -1,40 +1,78 @@
 {
-  "tsinghua": {
-    "recommended": "tsinghua-emblem-official.svg",
+  "banner": {
+    "file": "brand-banner.svg",
+    "viewBox": [
+      0,
+      0,
+      1400,
+      420
+    ],
+    "png": "brand-banner-3x.png",
+    "png_dimensions": [
+      4200,
+      1260
+    ],
+    "rebuild": "python docs/assets/build_brand_banner.py",
+    "description": "White reference-format header with exact Tsinghua calligraphy and horizontally arranged Huawei geometry. All visible marks and text are vector paths."
+  },
+  "tsinghua_emblem": {
+    "file": "tsinghua-emblem.svg",
     "source": "https://www.env.tsinghua.edu.cn/qinghuadaxueerjidanweibiaozhiguifanshouce-shixing.pdf",
     "source_page": 4,
-    "format": "SVG vector path",
-    "viewBox": [
-      0,
-      0,
-      54.82,
-      54.82
-    ],
-    "derivation": "Exact emblem path extracted from official PDF via MuPDF; isolated SVG path retains original geometry and converted source color. No generated logo or tracing.",
-    "fallback": "tsinghua-emblem-official-2048.png",
-    "bytes": 132138,
-    "sha256": "f77dbf05ae8d7408eef9ce556d3e30f7334a1d27e9a0571401cea204e6e5f5d9",
-    "fallback_rendering": "2048 square transparent PNG rendered from isolated exact vector path with librsvg."
+    "derivation": "Original official emblem vector path; preserved geometry and SVG color."
+  },
+  "tsinghua_calligraphy": {
+    "file": "tsinghua-calligraphy.svg",
+    "source": "https://www.env.tsinghua.edu.cn/qinghuadaxueerjidanweibiaozhiguifanshouce-shixing.pdf",
+    "source_page": 1,
+    "derivation": "Exact four-character calligraphy compound path extracted from the cover. White reverse-version fill set to the emblem purple #85448f for the white background. No substitute font, tracing or generated lettering."
   },
   "huawei": {
-    "recommended": "huawei-favicon-official.svg",
+    "original_file": "huawei-logo.svg",
+    "horizontal_file": "huawei-horizontal.svg",
     "source": "https://www.huawei.com/-/media/htemplate-home/1.0.1.20251205144752/components/assets/img/favicon-logo.svg",
-    "format": "SVG vector",
-    "viewBox": [
-      0,
-      0,
-      66.77,
-      66.77
-    ],
-    "derivation": "Unmodified official homepage favicon asset contains full vertical corporate flower and wordmark.",
-    "inline_style_variant": "huawei-logo-official.svg",
-    "fallback": "huawei-logo-official-1024.png",
-    "bytes": 3315,
-    "sha256": "18c6f80d423c1b1e01e4a6e02f66e1375567fd909de1af55c8013430a504126d",
-    "fallback_rendering": "1024 square transparent PNG rendered from the unmodified SVG with librsvg; full flower gradient and black wordmark verified."
+    "derivation": "Original flower path, official gradient and six wordmark glyphs arranged horizontally. Uniform component scaling preserves the exact paths and aspect ratios.",
+    "layout_reference": "https://e.huawei.com/marketingcloud/pep/asset/20000001/Material/45de3cd25cc4490ca407764f37c3a262/M3T1A669N1101884873329614975/03_%20Partner%20Co-Branding%20Guidelines%20V1_0.pdf",
+    "layout_reference_page": 6
   },
-  "notes": [
-    "Preserve aspect ratio and official colors. Use white background and substantial clear space. The Huawei partner branding PDF specifies 0.35 times symbol height minimum clear space.",
-    "Huawei official co-brand guideline source: https://e.huawei.com/marketingcloud/pep/asset/20000001/Material/45de3cd25cc4490ca407764f37c3a262/M3T1A669N1101884873329614975/03_%20Partner%20Co-Branding%20Guidelines%20V1_0.pdf"
-  ]
+  "typography": {
+    "english_caption": "TSINGHUA UNIVERSITY in one line, DejaVu Sans Bold converted to paths",
+    "project_name": "SignDuplex, DejaVu Sans Bold converted to paths",
+    "preserved_layout": {
+      "english_caption_width": 330.721353515625,
+      "english_caption_center_x": 478,
+      "english_caption_baseline_y": 244,
+      "project_name_width": 285.00931640625,
+      "project_name_center_x": 700,
+      "project_name_baseline_y": 363,
+      "method": "Uniform font-size adjustment preserves the original text widths; center positions and baselines are unchanged."
+    }
+  },
+  "verification": {
+    "external_image_count": 0,
+    "visible_text_node_count": 0,
+    "png_dimensions": [
+      4200,
+      1260
+    ],
+    "white_background": true
+  },
+  "files": {
+    "brand-banner.svg": {
+      "bytes": 163265,
+      "sha256": "a654eda5b0d03e0754b9bac89511ea7f6aa4692f0e485eb2be5d82a3d704c8e8"
+    },
+    "brand-banner-3x.png": {
+      "bytes": 395456,
+      "sha256": "6daf6d42484ffeb46541835c2a7d651eb0c50d798ffca8df37542efa03078449"
+    },
+    "tsinghua-calligraphy.svg": {
+      "bytes": 11089,
+      "sha256": "f3efbb16e5d08153e5aceb28a6069ef93681678d4b6690f3de1ea2e0bf0830cf"
+    },
+    "huawei-horizontal.svg": {
+      "bytes": 3214,
+      "sha256": "cce58306fba991d3e0c03e049c4bdfafde8578522cdeecd0f989fe0e42651294"
+    }
+  }
 }
