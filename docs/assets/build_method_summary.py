@@ -1,8 +1,8 @@
 """Build the compact SignDuplex paper-method SVG and its 3x PNG fallback.
 
 Run: python docs/assets/build_method_summary.py
-If Times New Roman is not installed, pass --font /path/to/times.ttf.
-Requires matplotlib, CairoSVG, and Times New Roman Regular.
+Optionally pass --font /path/to/DejaVuSans.ttf.
+Requires matplotlib, CairoSVG, and DejaVu Sans Regular.
 Edit LABELS to change native labels;
 the exported SVG outlines the font to keep typography consistent in README.
 """
@@ -23,7 +23,7 @@ from matplotlib.textpath import TextPath
 ROOT = Path(__file__).resolve().parent
 WIDTH, HEIGHT, SCALE = 1000, 200, 3
 PURPLE, RED, INK, MUTED = "#702082", "#c62642", "#24182e", "#74687c"
-FONT = "Times New Roman"
+FONT = "DejaVu Sans"
 LABELS = [
     (16, 226, "RGB · Pose · State", "Causal input tokens", 23, 19, False),
     (266, 180, "Qwen3-0.6B", "LoRA", 25, 20, False),
@@ -60,8 +60,8 @@ def build(font_file=None):
     font_file = font_file or findfont(
         FontProperties(family=FONT, weight="normal"), fallback_to_default=False)
     font = get_font(font_file)
-    if font.family_name != FONT or font.style_name != "Regular":
-        raise ValueError("The supplied font must be Times New Roman Regular.")
+    if font.family_name != FONT or font.style_name not in ("Book", "Regular"):
+        raise ValueError("The supplied font must be DejaVu Sans Regular.")
     body = ['<rect width="1000" height="200" fill="#fff"/>']
     bounds = []
     for index, (x, width, heading, subtitle, size, sub_size, bold) in enumerate(LABELS):
@@ -100,7 +100,7 @@ def build(font_file=None):
         "labels": [{"heading": item[2], "subtitle": item[3],
                     "heading_font_size": item[4], "subtitle_font_size": item[5]}
                    for item in LABELS],
-        "font": "Times New Roman Regular, outlined vector paths",
+        "font": "DejaVu Sans Regular, outlined vector paths",
         "raster_scale": SCALE,
     }, ensure_ascii=False))
     svg = (
@@ -135,5 +135,5 @@ def build(font_file=None):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--font", help="Path to the Times New Roman Regular font file")
+    parser.add_argument("--font", help="Path to the DejaVu Sans Regular font file")
     build(parser.parse_args().font)
