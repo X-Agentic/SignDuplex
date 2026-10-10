@@ -1,0 +1,26 @@
+{
+  "source": "brand-banner.svg",
+  "source_sha256": "a654eda5b0d03e0754b9bac89511ea7f6aa4692f0e485eb2be5d82a3d704c8e8",
+  "source_provenance": "brand-provenance.json",
+  "crop_in_source_coordinates": [
+    55,
+    36,
+    1300,
+    260
+  ],
+  "viewBox": [
+    0,
+    0,
+    1300,
+    260
+  ],
+  "png_dimensions": [
+    3900,
+    780
+  ],
+  "derivation": "Copied the five upper institution vector elements exactly, removed the bottom project name and rules, and translated the crop. No path, color, aspect ratio or font changes.",
+  "external_images": 0,
+  "visible_text_nodes": 0,
+  "original_header_unchanged": true,
+  "rebuild": "python docs/assets/build_institutions_banner.py"
+}

@@ -1,0 +1,117 @@
+{
+  "samples": [
+    {
+      "id": "complete-at-end",
+      "title": "Complete at the end",
+      "file": "media/complete-at-end.mp4",
+      "poster": "media/complete-at-end.jpg",
+      "duration": 7.3,
+      "initial_state": "RECEIVING",
+      "featured": true,
+      "recording": "recordings/complete-at-end.json",
+      "reference": "We've given you a lot of information from a stand point, now it's time to take the information go out on the lanes and play with it.",
+      "description": "The model keeps receiving until the final decision at 7.3 seconds."
+    },
+    {
+      "id": "pause-and-resume",
+      "title": "A pause within signing",
+      "file": "media/pause-and-resume.mp4",
+      "poster": "media/pause-and-resume.jpg",
+      "duration": 11.434,
+      "initial_state": "RECEIVING",
+      "featured": true,
+      "recording": "recordings/pause-and-resume.json",
+      "reference": "To your left we see again a sales pitch and I roll out a potential straight.",
+      "description": "WAIT appears during a pause, followed by INCOMPLETE. This recorded run stays in receiving through the end."
+    },
+    {
+      "id": "barge-interruption",
+      "title": "Signing interrupts a response",
+      "file": "media/barge-interruption.mp4",
+      "poster": "media/barge-interruption.jpg",
+      "duration": 5.0,
+      "initial_state": "RESPONDING",
+      "featured": true,
+      "recording": "recordings/barge-interruption.json",
+      "reference": "A layout's going to be a flip that's similar to a tuck where your hands never make contact to the ground.",
+      "description": "Starts in a simulated responding state. BARGE interrupts the response at 1 second."
+    },
+    {
+      "id": "ongoing-signing",
+      "title": "Ongoing signing",
+      "file": "media/ongoing-signing.mp4",
+      "poster": "media/ongoing-signing.jpg",
+      "duration": 5.0,
+      "initial_state": "RECEIVING",
+      "featured": false,
+      "recording": "recordings/ongoing-signing.json",
+      "reference": "Then, what you want to do actually, before you massage the calf, you want to massage up in the hamstrings, because if there's any congestion in here."
+    },
+    {
+      "id": "early-response",
+      "title": "Early response · inspect timing",
+      "file": "media/early-response.mp4",
+      "poster": "media/early-response.jpg",
+      "duration": 5.367,
+      "initial_state": "RECEIVING",
+      "featured": false,
+      "recording": "recordings/early-response.json",
+      "reference": "So we are going to dice the up also very very small."
+    },
+    {
+      "id": "sentence-end-response",
+      "title": "Sentence-end response",
+      "file": "media/sentence-end-response.mp4",
+      "poster": "media/sentence-end-response.jpg",
+      "duration": 6.034,
+      "initial_state": "RECEIVING",
+      "featured": false,
+      "recording": "recordings/sentence-end-response.json",
+      "reference": "And sometimes if you're not lined up quite right if you lay it on its front you can push it down a little bit better."
+    },
+    {
+      "id": "short-pauses",
+      "title": "Short pauses",
+      "file": "media/short-pauses.mp4",
+      "poster": "media/short-pauses.jpg",
+      "duration": 3.967,
+      "initial_state": "RECEIVING",
+      "featured": false,
+      "recording": "recordings/short-pauses.json",
+      "reference": "Now, the eye wants to travel to the point of highest contrast."
+    },
+    {
+      "id": "continuous-signing",
+      "title": "Continuous signing · inspect ending",
+      "file": "media/continuous-signing.mp4",
+      "poster": "media/continuous-signing.jpg",
+      "duration": 11.0,
+      "initial_state": "RECEIVING",
+      "featured": false,
+      "recording": "recordings/continuous-signing.json",
+      "reference": "Again this is a massage, just rubbing that muscle between your fingers, the tissues between your fingers and really rub that fairly hard, feel that skin move around so that you know that you're getting some real movement in the area."
+    },
+    {
+      "id": "wait-then-response",
+      "title": "Wait and response · inspect timing",
+      "file": "media/wait-then-response.mp4",
+      "poster": "media/wait-then-response.jpg",
+      "duration": 7.367,
+      "initial_state": "RECEIVING",
+      "featured": false,
+      "recording": "recordings/wait-then-response.json",
+      "reference": "So he can stand out you know, like this is the referee, don't, you know, run into him, don't kick the ball towards him because you know, he's just going to get in the way."
+    },
+    {
+      "id": "mixed-events",
+      "title": "Mixed events · inspect timing",
+      "file": "media/mixed-events.mp4",
+      "poster": "media/mixed-events.jpg",
+      "duration": 9.467,
+      "initial_state": "RECEIVING",
+      "featured": false,
+      "recording": "recordings/mixed-events.json",
+      "reference": "You can do it either with your hands, with your fingers closed and just stroking down the side of the horse, keeping one hand on the horse all the time while you are doing it."
+    }
+  ]
+}

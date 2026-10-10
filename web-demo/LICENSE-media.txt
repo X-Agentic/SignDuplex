@@ -1,0 +1,11 @@
+How2Sign media attribution and modification notice
+
+Original dataset: How2Sign: A Large-scale Multimodal Dataset for Continuous American Sign Language, CVPR 2021.
+Authors: Amanda Duarte, Shruti Palaskar, Lucas Ventura, Deepti Ghadiyaram, Kenneth DeHaan, Florian Metze, Jordi Torres, Xavier Giro-i-Nieto.
+Official source and copyright notice: https://how2sign.github.io/
+License: Creative Commons Attribution-NonCommercial 4.0 International (CC-BY-NC-4.0)
+License link: https://creativecommons.org/licenses/by-nc/4.0/
+
+Changes: Existing sentence clips or Dev prefixes were previously normalized for the local demo. This public package resizes the exact session input to 720-pixel width, re-encodes it as H.264/yuv420p, removes audio, and places the MP4 index at the front for browser playback. No frame was removed or added and no speed change was applied in this packaging step.
+
+Reference English sentences are dataset annotations, not generated translations or frame-aligned predicted captions. BARGE uses an explicitly assigned RESPONDING initial state and a simulated system response; it is not a recording of naturally overlapping signed dialogue. All recorded event predictions are from the actual epoch2 model under direct_model_routing_v1. Sample selection does not establish interaction accuracy or natural-dialogue ground truth. No endorsement by the dataset authors is implied.

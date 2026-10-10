@@ -10,7 +10,6 @@
 </p>
 
 <p align="center">
-  <a href="docs/paper/SignDuplex.pdf"><b>Paper ↗</b></a> &nbsp; / &nbsp;
   <a href="https://signduplex-demo.brown-charm-3727.chatgpt.site/#demo"><b>Demo ↗</b></a> &nbsp; / &nbsp;
   <a href="#method">Method</a> &nbsp; / &nbsp;
   <a href="#results">Results</a> &nbsp; / &nbsp;
@@ -37,7 +36,11 @@
 
 **[Open the interactive demo ↗](https://signduplex-demo.brown-charm-3727.chatgpt.site/#demo)**
 
-Explore the five interaction events and the two-state controller in an interactive illustration. Recorded signing demos will be added here.
+Try **DEMO_v5.1** with **10 sample videos**, or upload your own clip. Run the model, then inspect its five-event predictions alongside synchronized video playback. Pause, seek, change playback speed, or download the prediction record.
+
+**[Watch three selected examples ↗](https://signduplex-demo.brown-charm-3727.chatgpt.site/#examples)** — an utterance ending, a pause within signing, and signing that interrupts a simulated response.
+
+<sub>The online demo prepares predictions before playback, using only the frames available at each decision time. Response activity is simulated; reference text comes from source annotations. Sample videos are from How2Sign, used under CC BY-NC 4.0; see the <a href="web-demo/LICENSE-media.txt">media attribution</a>.</sub>
 
 ## Method
 
@@ -68,7 +71,7 @@ Explore the five interaction events and the two-state controller in an interacti
 | **COMPLETE** | The user has finished the current utterance and will not continue within this turn | In RECEIVING, submit the segment and switch to RESPONDING |
 | **BARGE** | The user begins a new valid utterance during system output | In RESPONDING, stop output and switch to RECEIVING |
 
-In RESPONDING, every non-BARGE event keeps the system responding. See Sections 3.1–3.3 of the [paper](docs/paper/SignDuplex.pdf) for the event definitions and model formulation.
+In RESPONDING, every non-BARGE event keeps the system responding.
 
 ## Results
 
