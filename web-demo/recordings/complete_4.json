@@ -1,0 +1,129 @@
+{
+  "initial_state": "RECEIVING",
+  "duration": 4.833333333333333,
+  "records": [
+    {
+      "seq": 0,
+      "time": 1.0,
+      "kind": "prediction",
+      "event": "INCOMPLETE",
+      "event_index": 1,
+      "probabilities": {
+        "REJECT": 5.4146485906070296e-11,
+        "INCOMPLETE": 1.0,
+        "WAIT": 7.240481543317745e-13,
+        "COMPLETE": 1.6164645576938197e-12,
+        "BARGE": 3.1765562624741506e-08
+      },
+      "raw_event": "INCOMPLETE",
+      "system_state_input": "RECEIVING",
+      "state_after": "RECEIVING",
+      "action": "continue",
+      "response_until": null,
+      "start_frame": 0,
+      "end_frame": 30,
+      "partial_tail": false,
+      "visible_until_seconds": 1.0,
+      "state_before": "RECEIVING"
+    },
+    {
+      "seq": 1,
+      "time": 2.0,
+      "kind": "prediction",
+      "event": "INCOMPLETE",
+      "event_index": 1,
+      "probabilities": {
+        "REJECT": 2.653915203154611e-07,
+        "INCOMPLETE": 0.9999910593032837,
+        "WAIT": 3.453294539212948e-08,
+        "COMPLETE": 5.668009634973714e-06,
+        "BARGE": 2.9309046567504993e-06
+      },
+      "raw_event": "INCOMPLETE",
+      "system_state_input": "RECEIVING",
+      "state_after": "RECEIVING",
+      "action": "continue",
+      "response_until": null,
+      "start_frame": 0,
+      "end_frame": 60,
+      "partial_tail": false,
+      "visible_until_seconds": 2.0,
+      "state_before": "RECEIVING"
+    },
+    {
+      "seq": 2,
+      "time": 3.0,
+      "kind": "prediction",
+      "event": "COMPLETE",
+      "event_index": 3,
+      "probabilities": {
+        "REJECT": 0.0008474737405776978,
+        "INCOMPLETE": 0.0003385257441550493,
+        "WAIT": 9.058579166776326e-07,
+        "COMPLETE": 0.9987339377403259,
+        "BARGE": 7.924706733319908e-05
+      },
+      "raw_event": "COMPLETE",
+      "system_state_input": "RECEIVING",
+      "state_after": "RESPONDING",
+      "action": "start_response",
+      "response_until": 9.0,
+      "start_frame": 0,
+      "end_frame": 90,
+      "partial_tail": false,
+      "visible_until_seconds": 3.0,
+      "state_before": "RECEIVING"
+    },
+    {
+      "seq": 3,
+      "time": 4.0,
+      "kind": "prediction",
+      "event": "REJECT",
+      "event_index": 0,
+      "probabilities": {
+        "REJECT": 0.9990378618240356,
+        "INCOMPLETE": 2.5449304885682977e-08,
+        "WAIT": 7.491146334359655e-06,
+        "COMPLETE": 0.00010832451516762376,
+        "BARGE": 0.0008462881087325513
+      },
+      "raw_event": "REJECT",
+      "system_state_input": "RESPONDING",
+      "state_after": "RESPONDING",
+      "action": "continue",
+      "response_until": 9.0,
+      "start_frame": 90,
+      "end_frame": 120,
+      "partial_tail": false,
+      "visible_until_seconds": 4.0,
+      "state_before": "RESPONDING"
+    },
+    {
+      "seq": 4,
+      "time": 4.833333333333333,
+      "kind": "prediction",
+      "event": "REJECT",
+      "event_index": 0,
+      "probabilities": {
+        "REJECT": 0.8415151834487915,
+        "INCOMPLETE": 7.91940578892536e-07,
+        "WAIT": 0.11312832683324814,
+        "COMPLETE": 0.009214218705892563,
+        "BARGE": 0.03614148125052452
+      },
+      "raw_event": "REJECT",
+      "system_state_input": "RESPONDING",
+      "state_after": "RESPONDING",
+      "action": "continue",
+      "response_until": 9.0,
+      "start_frame": 90,
+      "end_frame": 145,
+      "partial_tail": true,
+      "visible_until_seconds": 4.833333333333333,
+      "state_before": "RESPONDING"
+    }
+  ],
+  "model_epoch": 2,
+  "model_sha256": "d3769eedbe8320221f5633c0edb674798bb052024d1de9394b23e56a5d5cb0af",
+  "controller_policy": "direct_model_routing_v1"
+}

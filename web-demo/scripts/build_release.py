@@ -21,7 +21,7 @@ for sample in samples:
 seed=json.dumps(entries,sort_keys=True,separators=(',',':')).encode();release='collection-'+hashof(seed)[:12]
 data={'schema':2,'release':release,'samples':entries};payload=json.dumps(data,separators=(',',':')).replace('<','\\u003c')
 collection_file=f'collection.{hashof(payload.encode())[:12]}.json';(assets/collection_file).write_text(payload)
-js=(Path(__file__).parent/'demo-runtime.js').read_text().replace('__RELEASE__',release).replace('__COLLECTION_URL__','assets/'+collection_file)
+js=(Path(__file__).parent/'demo-runtime.js').read_text().replace('__RELEASE__',release).replace('__COLLECTION_URL__','assets/'+collection_file).replace('__SAMPLE_COUNT__',str(len(entries)))
 (root/'demo.js').write_text(js);jsfile=f'app.{hashof(js.encode())[:12]}.js';(assets/jsfile).write_text(js)
 css=(root/'style.css').read_bytes();cssfile=f'style.{hashof(css)[:12]}.css';(assets/cssfile).write_bytes(css)
 soup=BeautifulSoup((root/'index.html').read_text(),'html.parser')

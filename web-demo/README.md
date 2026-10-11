@@ -1,8 +1,8 @@
 # SignDuplex video examples
 
-[Open the example collection](https://signduplex-demo.brown-charm-3727.chatgpt.site/?v=cachefix-20261011#demo).
+[Open the example collection](https://signduplex-demo.brown-charm-3727.chatgpt.site/?v=examples25-20261011#demo).
 
-This static website includes 17 examples across five interaction events: 5 REJECT clips and 3 each for INCOMPLETE, WAIT, COMPLETE, and BARGE. Each clip plays alongside its recorded model-event timeline.
+This static website includes 25 examples across five interaction events: 5 each for REJECT, INCOMPLETE, WAIT, COMPLETE, and BARGE. Each clip plays alongside its recorded model-event timeline.
 
 ## Playback and release binding
 

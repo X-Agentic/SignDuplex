@@ -1,6 +1,6 @@
 SignDuplex example collection — media credits
 
-The collection contains 12 How2Sign clips and 5 generated everyday-activity clips. Event timelines are recorded model predictions.
+The collection contains 20 How2Sign clips and 5 generated everyday-activity clips. Event timelines are recorded model predictions.
 
 How2Sign media — CC-BY-NC-4.0
 

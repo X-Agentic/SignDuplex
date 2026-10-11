@@ -1,6 +1,7 @@
 'use strict';
-const RELEASE = 'collection-cd3967988892';
-const COLLECTION_URL = 'assets/collection.51ec88224b05.json';
+const RELEASE = 'collection-a82b0f27fc5e';
+const COLLECTION_URL = 'assets/collection.6b4fa4570293.json';
+const EXPECTED_COUNT = 25;
 const $ = id => document.getElementById(id);
 const GROUPS = {
   ALL: {title: 'All examples', description: 'Choose a moment. Video and model predictions play together.'},
@@ -59,7 +60,7 @@ async function retryRequest(path, validate) {
   throw error;
 }
 function validCollection(data) {
-  if (data?.schema !== 2 || data.release !== RELEASE || !Array.isArray(data.samples) || data.samples.length !== 17) return false;
+  if (data?.schema !== 2 || data.release !== RELEASE || !Array.isArray(data.samples) || data.samples.length !== EXPECTED_COUNT) return false;
   const ids = new Set();
   for (const s of data.samples) {
     if (ids.has(s.id) || !s.id || !DESCRIPTIONS[s.category] || typeof s.title !== 'string' || !s.poster.startsWith('data:image/') || !s.file.includes(s.sha256.slice(0, 12)) || !s.bytes || !Array.isArray(s.record?.records) || !s.record.records.some(r => r.kind === 'prediction')) return false;
@@ -138,9 +139,9 @@ function render(time, force = false) {
   const key = `${sample.id}|${predictions.length}|${state}`; if (!force && key === renderKey) return; renderKey = key;
   $('prediction-panel').dataset.event = last?.event || ''; $('prediction-panel').dataset.predictionTime = last ? String(last.time) : '';
   $('system-state').textContent = state; $('system-state').classList.toggle('responding', state === 'RESPONDING');
-  $('prediction-event').textContent = last?.event || 'Observing';
-  $('prediction-description').textContent = last ? DESCRIPTIONS[last.event] || '' : 'Follow the video to the first event.';
-  $('event-index').textContent = last ? `${String(EVENTS.indexOf(last.event) + 1).padStart(2, '0')} / 05` : '— / 05';
+  $('prediction-event').textContent = last?.event || '';
+  $('prediction-description').textContent = last ? DESCRIPTIONS[last.event] || '' : '';
+  $('event-index').textContent = last ? `${String(EVENTS.indexOf(last.event) + 1).padStart(2, '0')} / 05` : '';
   const changes = predictions.filter((row, i) => i === 0 || row.event !== predictions[i - 1].event);
   $('event-sequence').replaceChildren(...changes.map(row => { const badge = document.createElement('span'); badge.className = `sequence-event ${row.event.toLowerCase()}`; badge.textContent = row.event; badge.title = `${Number(Number(row.time).toFixed(3))} s`; return badge; }));
   if (!changes.length) { const empty = document.createElement('span'); empty.className = 'sequence-empty'; empty.textContent = 'Events appear as the video plays.'; $('event-sequence').append(empty); }
@@ -185,8 +186,8 @@ player.addEventListener('error', () => {
   URL.revokeObjectURL(source);
   $('prepare-cover').hidden = false; $('prepare-text').textContent = 'Choose another ready example, or retry this one.';
   $('prediction-panel').dataset.event = ''; $('prediction-panel').dataset.predictionTime = ''; $('prediction-panel').dataset.mediaTime = '0';
-  $('prediction-event').textContent = 'Ready.'; $('prediction-description').textContent = 'Choose an example to begin.';
-  $('event-index').textContent = '— / 05'; $('event-sequence').replaceChildren();
+  $('prediction-event').textContent = ''; $('prediction-description').textContent = '';
+  $('event-index').textContent = ''; $('event-sequence').replaceChildren();
   $('system-state').textContent = '—'; $('system-state').classList.remove('responding');
   $('media-clock').textContent = '00:00 / 00:00'; $('reference-line').hidden = true;
   document.querySelectorAll('.sample-card').forEach(b => b.setAttribute('aria-pressed', 'false'));

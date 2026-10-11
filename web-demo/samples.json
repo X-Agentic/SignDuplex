@@ -97,6 +97,30 @@
       "description": "The controller continues receiving as signing proceeds."
     },
     {
+      "id": "incomplete_4",
+      "title": "Signing continues",
+      "category": "INCOMPLETE",
+      "file": "media/incomplete_4.ab43c790c2e8.mp4",
+      "poster": "media/incomplete_4.jpg",
+      "recording": "recordings/incomplete_4.json",
+      "duration": 6.934,
+      "initial_state": "RECEIVING",
+      "reference": "So now we want to go ahead and do it all over again and make sure that all the air bubbles are out of your clay before you start working.",
+      "description": "INCOMPLETE is retained throughout the sequence."
+    },
+    {
+      "id": "incomplete_5",
+      "title": "An ongoing sequence",
+      "category": "INCOMPLETE",
+      "file": "media/incomplete_5.08e7f1ce5f44.mp4",
+      "poster": "media/incomplete_5.jpg",
+      "recording": "recordings/incomplete_5.json",
+      "duration": 11.0,
+      "initial_state": "RECEIVING",
+      "reference": "Again this is a massage, just rubbing that muscle between your fingers, the tissues between your fingers and really rub that fairly hard, feel that skin move around so that you know that you're getting some real movement in the area.",
+      "description": "The controller keeps receiving as signing continues."
+    },
+    {
       "id": "wait_1",
       "title": "Pause and resume",
       "category": "WAIT",
@@ -131,6 +155,30 @@
       "initial_state": "RECEIVING",
       "reference": "So he can stand out you know, like this is the referee, don't, you know, run into him, don't kick the ball towards him because you know, he's just going to get in the way.",
       "description": "WAIT at 4 s precedes COMPLETE at 5 s."
+    },
+    {
+      "id": "wait_4",
+      "title": "A pause in the sequence",
+      "category": "WAIT",
+      "file": "media/wait_4.f1e7bc938ad7.mp4",
+      "poster": "media/wait_4.jpg",
+      "recording": "recordings/wait_4.json",
+      "duration": 9.467,
+      "initial_state": "RECEIVING",
+      "reference": "You can do it either with your hands, with your fingers closed and just stroking down the side of the horse, keeping one hand on the horse all the time while you are doing it.",
+      "description": "WAIT at 3 s is followed by INCOMPLETE at 4 s."
+    },
+    {
+      "id": "wait_5",
+      "title": "A hold and continuation",
+      "category": "WAIT",
+      "file": "media/wait_5.6f653eefcc92.mp4",
+      "poster": "media/wait_5.jpg",
+      "recording": "recordings/wait_5.json",
+      "duration": 11.734,
+      "initial_state": "RECEIVING",
+      "reference": "There's a difference between respect, which he was not respecting him, that's what she thought, and fear.",
+      "description": "WAIT at 7 s is followed by INCOMPLETE at 8 s."
     },
     {
       "id": "complete_1",
@@ -169,6 +217,30 @@
       "description": "After a WAIT decision, COMPLETE at 9 s initiates a response."
     },
     {
+      "id": "complete_4",
+      "title": "Hands return to rest",
+      "category": "COMPLETE",
+      "file": "media/complete_4.b015463bc1ac.mp4",
+      "poster": "media/complete_4.jpg",
+      "recording": "recordings/complete_4.json",
+      "duration": 4.834,
+      "initial_state": "RECEIVING",
+      "reference": "This will kind of create a nice fresh type of clove scent in your mouth.",
+      "description": "COMPLETE at 3 s switches the system to RESPONDING."
+    },
+    {
+      "id": "complete_5",
+      "title": "A transition at the end",
+      "category": "COMPLETE",
+      "file": "media/complete_5.a5437324b7a8.mp4",
+      "poster": "media/complete_5.jpg",
+      "recording": "recordings/complete_5.json",
+      "duration": 8.667,
+      "initial_state": "RECEIVING",
+      "reference": "See how I'm kind of like going around like in little spirals all the way around it, all the way to the top?",
+      "description": "The full sequence includes COMPLETE at 4 s and 8 s."
+    },
+    {
       "id": "barge_1",
       "title": "Interrupting a response",
       "category": "BARGE",
@@ -203,6 +275,30 @@
       "initial_state": "RESPONDING",
       "reference": "So centering is a process of pulling the clay up and pushing it back down so that the entire piece of clay is centering on the wheel.",
       "description": "BARGE switches the system from RESPONDING to RECEIVING."
+    },
+    {
+      "id": "barge_4",
+      "title": "Signing takes the turn",
+      "category": "BARGE",
+      "file": "media/barge_4.f5683645f416.mp4",
+      "poster": "media/barge_4.jpg",
+      "recording": "recordings/barge_4.json",
+      "duration": 5.0,
+      "initial_state": "RESPONDING",
+      "reference": "You can slowly expand on that, and if you are trying to do a specific kind of competition, go ahead and see what those requirements are for that competition, speed is, how fast people usually do things and how do they feel afterwards.",
+      "description": "Starting in RESPONDING, BARGE at 1 s switches to RECEIVING."
+    },
+    {
+      "id": "barge_5",
+      "title": "A new signing onset",
+      "category": "BARGE",
+      "file": "media/barge_5.e6e09de590f5.mp4",
+      "poster": "media/barge_5.jpg",
+      "recording": "recordings/barge_5.json",
+      "duration": 5.0,
+      "initial_state": "RESPONDING",
+      "reference": "If you're only putting a couple of things in, you don't want to wash it on a large load size, because you're just going to be using more water than you need.",
+      "description": "BARGE at 1 s interrupts the response."
     }
   ]
 }
