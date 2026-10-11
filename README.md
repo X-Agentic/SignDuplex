@@ -34,13 +34,11 @@
 
 ## Demo
 
-**[Open the interactive demo ↗](https://signduplex-demo.brown-charm-3727.chatgpt.site/#demo)**
+**[Open the review samples ↗](https://signduplex-demo.brown-charm-3727.chatgpt.site/#demo)**
 
-Try **DEMO_v5.1** with **10 sample videos**, or upload your own clip. Run the model, then inspect its five-event predictions alongside synchronized video playback. Pause, seek, change playback speed, or download the prediction record.
+Explore sample videos grouped into the five interaction-event categories: **REJECT**, **INCOMPLETE**, **WAIT**, **COMPLETE**, and **BARGE**. Each clip includes recorded model predictions prepared in advance and synchronized with video playback.
 
-**[Watch three selected examples ↗](https://signduplex-demo.brown-charm-3727.chatgpt.site/#examples)** — an utterance ending, a pause within signing, and signing that interrupts a simulated response.
-
-<sub>The online demo prepares predictions before playback, using only the frames available at each decision time. Response activity is simulated; reference text comes from source annotations. Sample videos are from How2Sign, used under CC BY-NC 4.0; see the <a href="web-demo/LICENSE-media.txt">media attribution</a>.</sub>
+Use the playback controls to pause, seek, or replay a moment and inspect its predicted event.
 
 ## Method
 

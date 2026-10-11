@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "id": "reject-sleeve",
+  "status": "complete",
+  "duration": 5.066666666666666,
+  "initial_state": "RECEIVING",
+  "model": {
+    "name": "DEMO_v5.1",
+    "epoch": 2,
+    "labels": [
+      "REJECT",
+      "INCOMPLETE",
+      "WAIT",
+      "COMPLETE",
+      "BARGE"
+    ]
+  },
+  "controller_policy": {
+    "version": "direct_model_routing_v1",
+    "complete_confirmation_guard": false,
+    "model_outputs_overridden": false
+  },
+  "records": [
+    {
+      "kind": "prediction",
+      "time": 1.0,
+      "seq": 0,
+      "visible_until_seconds": 1.0,
+      "partial_tail": false,
+      "event": "REJECT",
+      "raw_event": "REJECT",
+      "system_state_input": "RECEIVING",
+      "state_after": "RECEIVING",
+      "action": "continue",
+      "response_until": null
+    },
+    {
+      "kind": "prediction",
+      "time": 2.0,
+      "seq": 1,
+      "visible_until_seconds": 2.0,
+      "partial_tail": false,
+      "event": "REJECT",
+      "raw_event": "REJECT",
+      "system_state_input": "RECEIVING",
+      "state_after": "RECEIVING",
+      "action": "continue",
+      "response_until": null
+    },
+    {
+      "kind": "prediction",
+      "time": 3.0,
+      "seq": 2,
+      "visible_until_seconds": 3.0,
+      "partial_tail": false,
+      "event": "REJECT",
+      "raw_event": "REJECT",
+      "system_state_input": "RECEIVING",
+      "state_after": "RECEIVING",
+      "action": "continue",
+      "response_until": null
+    },
+    {
+      "kind": "prediction",
+      "time": 4.0,
+      "seq": 3,
+      "visible_until_seconds": 4.0,
+      "partial_tail": false,
+      "event": "REJECT",
+      "raw_event": "REJECT",
+      "system_state_input": "RECEIVING",
+      "state_after": "RECEIVING",
+      "action": "continue",
+      "response_until": null
+    },
+    {
+      "kind": "prediction",
+      "time": 5.0,
+      "seq": 4,
+      "visible_until_seconds": 5.0,
+      "partial_tail": false,
+      "event": "REJECT",
+      "raw_event": "REJECT",
+      "system_state_input": "RECEIVING",
+      "state_after": "RECEIVING",
+      "action": "continue",
+      "response_until": null
+    },
+    {
+      "kind": "prediction",
+      "time": 5.066666666666666,
+      "seq": 5,
+      "visible_until_seconds": 5.066666666666666,
+      "partial_tail": true,
+      "event": "REJECT",
+      "raw_event": "REJECT",
+      "system_state_input": "RECEIVING",
+      "state_after": "RECEIVING",
+      "action": "continue",
+      "response_until": null
+    }
+  ]
+}

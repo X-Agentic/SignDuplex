@@ -1,11 +1,23 @@
-How2Sign media attribution and modification notice
+SignDuplex example collection — media credits
 
-Original dataset: How2Sign: A Large-scale Multimodal Dataset for Continuous American Sign Language, CVPR 2021.
-Authors: Amanda Duarte, Shruti Palaskar, Lucas Ventura, Deepti Ghadiyaram, Kenneth DeHaan, Florian Metze, Jordi Torres, Xavier Giro-i-Nieto.
-Official source and copyright notice: https://how2sign.github.io/
-License: Creative Commons Attribution-NonCommercial 4.0 International (CC-BY-NC-4.0)
-License link: https://creativecommons.org/licenses/by-nc/4.0/
+The collection contains 12 How2Sign clips and 5 generated everyday-activity clips. Event timelines are recorded model predictions.
 
-Changes: Existing sentence clips or Dev prefixes were previously normalized for the local demo. This public package resizes the exact session input to 720-pixel width, re-encodes it as H.264/yuv420p, removes audio, and places the MP4 index at the front for browser playback. No frame was removed or added and no speed change was applied in this packaging step.
+How2Sign media — CC-BY-NC-4.0
 
-Reference English sentences are dataset annotations, not generated translations or frame-aligned predicted captions. BARGE uses an explicitly assigned RESPONDING initial state and a simulated system response; it is not a recording of naturally overlapping signed dialogue. All recorded event predictions are from the actual epoch2 model under direct_model_routing_v1. Sample selection does not establish interaction accuracy or natural-dialogue ground truth. No endorsement by the dataset authors is implied.
+How2Sign: A Large-scale Multimodal Dataset for Continuous American Sign Language. CVPR 2021.
+Amanda Duarte, Shruti Palaskar, Lucas Ventura, Deepti Ghadiyaram, Kenneth DeHaan, Florian Metze, Jordi Torres, Xavier Giro-i-Nieto.
+Source and copyright notice: https://how2sign.github.io/
+License: https://creativecommons.org/licenses/by-nc/4.0/
+
+Modifications: source sentence clips or existing Dev prefixes were normalized by the local demo; this package resizes the exact recorded-session input to 720-pixel width, re-encodes H.264/yuv420p, removes audio, and enables faststart. No frame was added or removed and no speed change was applied during packaging.
+
+English sentences are source annotations. No endorsement by the dataset authors is implied.
+
+
+Generated everyday-activity clips
+
+Files: reject-phone, reject-sleeve, reject-hair, reject-stretch, reject-papers.
+These clips depict synthetic people and were generated locally with Wan2.2-T2V-A14B from text prompts. The model is distributed under Apache-2.0; model authors do not claim rights over generated content.
+Official model and license information: https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B#license-agreement
+
+Processing: resized to 720 pixels wide, encoded as H.264/yuv420p at 30 fps with faststart. The published video is the same canonical input used to produce its event record.
