@@ -1,4 +1,6 @@
 'use strict';
+const RELEASE = 'collection-cd3967988892';
+const COLLECTION_URL = 'assets/collection.51ec88224b05.json';
 const $ = id => document.getElementById(id);
 const GROUPS = {
   ALL: {title: 'All examples', description: 'Choose a moment. Video and model predictions play together.'},
@@ -16,86 +18,108 @@ const DESCRIPTIONS = {
   BARGE: 'The model detects new signing during a response.'
 };
 const EVENTS = Object.keys(DESCRIPTIONS);
-let samples = [], current = null, category = 'ALL', ready = false, busy = false, renderKey = '';
+let samples = [], current = null, category = 'ALL', busy = false, renderKey = '';
+const states = new Map(), inflight = new Map();
+const player = document.createElement('video');
+player.controls = true; player.playsInline = true; player.preload = 'auto'; player.muted = true;
+player.hidden = true; $('video-stage').append(player);
 const prepared = new Map();
 const clock = value => { const n = Math.floor(Math.max(0, Number(value) || 0)); return `${String(Math.floor(n / 60)).padStart(2, '0')}:${String(n % 60).padStart(2, '0')}`; };
 function message(text) { $('player-status').textContent = text; }
-function showPreparationError() {
-  $('cache-status').className = 'cache-status failed'; $('cache-label').textContent = 'Some examples could not be prepared';
-  $('prepare-text').textContent = 'Please retry to finish preparing the collection.'; $('retry').hidden = false;
-  message('A connection interrupted preparation. Retry once to make the collection ready.');
-}
 function updateProgress() {
-  const count = prepared.size, percent = samples.length ? count / samples.length * 100 : 0;
-  $('cache-label').textContent = `Preparing examples · ${count} / ${samples.length}`;
-  $('prepare-count').textContent = `${count} of ${samples.length} examples ready`;
-  $('prepare-progress').style.width = `${percent}%`;
+  const n = prepared.size, failed = samples.filter(s => states.get(s.id) === 'error').length;
+  $('cache-label').textContent = n === samples.length ? `All ${n} examples ready` : n ? `${n} / ${samples.length} examples ready` : 'Preparing the first example…';
+  $('cache-status').className = `cache-status ${n === samples.length ? 'ready' : failed && !n ? 'failed' : ''}`;
+  $('retry').hidden = !failed; $('retry').textContent = 'Retry unavailable examples';
+  $('prepare-count').textContent = `${n} of ${samples.length} examples ready`;
+  $('prepare-progress').style.width = `${samples.length ? n / samples.length * 100 : 0}%`;
+  if (!current && failed && failed === samples.length) $('prepare-text').textContent = 'The connection was interrupted. Retry any example below.';
+  document.querySelectorAll('.sample-card').forEach(button => {
+    const state = states.get(button.dataset.id) || 'queued';
+    button.dataset.status = state; button.disabled = state === 'queued' || state === 'loading';
+    button.querySelector('.sample-cache-state').textContent = state === 'ready' ? 'Ready to play' : state === 'error' ? 'Retry this example ↻' : 'Preparing…';
+  });
+  controls();
 }
-async function fetchChecked(path, type) {
-  const response = await fetch(path, {cache: 'force-cache'});
-  if (!response.ok) throw Error(`Could not prepare ${path}`);
-  return type === 'json' ? response.json() : response.blob();
+async function requestBytes(path, attempt) {
+  const controller = new AbortController(), timer = setTimeout(() => controller.abort(), 16000);
+  try {
+    const address = attempt ? `${path}${path.includes('?') ? '&' : '?'}retry=${attempt}` : path;
+    const response = await fetch(address, {cache: attempt ? 'reload' : 'default', signal: controller.signal});
+    if (!response.ok) throw Error(`HTTP ${response.status}`);
+    return await response.arrayBuffer();
+  } finally { clearTimeout(timer); }
 }
-function prepareVideo(video) {
-  return new Promise((resolve, reject) => {
-    const timer = setTimeout(() => finish(Error('Video preparation timed out')), 45000);
-    const loaded = () => { if (video.readyState >= 2) finish(); };
-    const failed = () => finish(Error('This video could not be decoded'));
-    function finish(error) { clearTimeout(timer); video.removeEventListener('loadeddata', loaded); video.removeEventListener('canplay', loaded); video.removeEventListener('error', failed); error ? reject(error) : resolve(); }
-    video.addEventListener('loadeddata', loaded); video.addEventListener('canplay', loaded); video.addEventListener('error', failed); video.load(); loaded();
+async function retryRequest(path, validate) {
+  let error;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try { return await validate(await requestBytes(path, attempt)); }
+    catch (e) { error = e; if (attempt < 2) await new Promise(r => setTimeout(r, 450 * (attempt + 1))); }
+  }
+  throw error;
+}
+function validCollection(data) {
+  if (data?.schema !== 2 || data.release !== RELEASE || !Array.isArray(data.samples) || data.samples.length !== 17) return false;
+  const ids = new Set();
+  for (const s of data.samples) {
+    if (ids.has(s.id) || !s.id || !DESCRIPTIONS[s.category] || typeof s.title !== 'string' || !s.poster.startsWith('data:image/') || !s.file.includes(s.sha256.slice(0, 12)) || !s.bytes || !Array.isArray(s.record?.records) || !s.record.records.some(r => r.kind === 'prediction')) return false;
+    if (s.record.records.some(r => !Number.isFinite(Number(r.time)) || r.kind === 'prediction' && !DESCRIPTIONS[r.event])) return false;
+    ids.add(s.id);
+  }
+  return true;
+}
+async function getCollection() {
+  const inline = $('example-data');
+  if (inline) { try { const data = JSON.parse(inline.textContent); if (validCollection(data)) return data; } catch {} }
+  return retryRequest(COLLECTION_URL, bytes => {
+    const data = JSON.parse(new TextDecoder().decode(bytes));
+    if (!validCollection(data)) throw Error('Collection version mismatch');
+    return data;
   });
 }
-async function prepareSample(sample) {
-  if (prepared.has(sample.id)) return;
-  const [blob, recording] = await Promise.all([fetchChecked(sample.file, 'blob'), fetchChecked(sample.recording, 'json')]);
-  if (!Array.isArray(recording.records) || !recording.records.some(r => r.kind === 'prediction')) throw Error('Prediction record is incomplete');
-  const video = document.createElement('video');
-  video.controls = true; video.playsInline = true; video.preload = 'auto'; video.muted = true;
-  video.setAttribute('aria-label', sample.title); video.poster = sample.poster; const source = URL.createObjectURL(blob); video.src = source;
-  const item = {sample, recording, video, source}; $('preload-bin').append(video);
-  try { await prepareVideo(video); } catch (error) { video.remove(); URL.revokeObjectURL(source); throw error; }
-  const sync = () => { if (current === item) { render(video.currentTime); controls(); } };
-  for (const name of ['timeupdate', 'seeking', 'seeked', 'pause', 'ended', 'ratechange']) video.addEventListener(name, sync);
-  video.addEventListener('play', () => { if (current !== item) { video.pause(); return; } controls(); message(''); followFrames(item); });
-  prepared.set(sample.id, item); updateProgress();
+async function loadSample(sample) {
+  const blob = await retryRequest(sample.file, async bytes => {
+    if (bytes.byteLength !== sample.bytes) throw Error('Incomplete video');
+    if (globalThis.crypto?.subtle) {
+      const digest = await crypto.subtle.digest('SHA-256', bytes);
+      const hash = Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, '0')).join('');
+      if (hash !== sample.sha256) throw Error('Video version mismatch');
+    }
+    return new Blob([bytes], {type: 'video/mp4'});
+  });
+  prepared.set(sample.id, {sample, recording: sample.record, source: URL.createObjectURL(blob)});
+  states.set(sample.id, 'ready'); updateProgress();
+  if (!current) { selectSample(sample.id, false); message('Choose any ready example to begin.'); }
 }
-function followFrames(item) {
-  const v = item.video;
-  if (current !== item || v.paused || v.ended || item.framePending) return;
-  item.framePending = true;
-  const next = (_, meta) => {
-    item.framePending = false;
-    if (current !== item || v.paused) return;
-    const t = meta && !v.seeking && Math.abs(meta.mediaTime - v.currentTime) < .12 ? meta.mediaTime : v.currentTime;
-    render(Math.min(t, v.currentTime)); followFrames(item);
-  };
-  if ('requestVideoFrameCallback' in v) v.requestVideoFrameCallback(next); else requestAnimationFrame(next);
+function prepareSample(sample) {
+  if (prepared.has(sample.id)) return Promise.resolve();
+  if (inflight.has(sample.id)) return inflight.get(sample.id);
+  states.set(sample.id, 'loading'); updateProgress();
+  const pending = loadSample(sample).catch(() => { states.set(sample.id, 'error'); }).finally(() => { inflight.delete(sample.id); updateProgress(); });
+  inflight.set(sample.id, pending); return pending;
 }
 async function prepareCollection() {
-  if (busy) return; busy = true; $('retry').hidden = true; $('cache-status').className = 'cache-status'; updateProgress();
-  const pending = samples.filter(s => !prepared.has(s.id)); let cursor = 0, failed = false;
-  const worker = async () => { while (cursor < pending.length) { const sample = pending[cursor++]; try { await prepareSample(sample); } catch { failed = true; } } };
-  await Promise.all(Array.from({length: Math.min(4, pending.length)}, worker)); busy = false;
-  if (failed || prepared.size !== samples.length) { showPreparationError(); return; }
-  ready = true; $('prepare-cover').hidden = true; $('cache-status').className = 'cache-status ready'; $('cache-label').textContent = `All ${samples.length} examples ready`;
-  document.querySelectorAll('.sample-card').forEach(button => { button.disabled = false; });
-  selectSample(samples[0].id, false); controls(); message('Choose any example to start playback.');
+  if (busy) return; busy = true;
+  const pending = samples.filter(s => !prepared.has(s.id)); let cursor = 0;
+  const worker = async () => { while (cursor < pending.length) await prepareSample(pending[cursor++]); };
+  await Promise.all(Array.from({length: Math.min(4, pending.length)}, worker)); busy = false; updateProgress();
 }
 function controls() {
-  $('play').disabled = !ready || !current; $('restart').disabled = !ready || !current;
+  $('play').disabled = !current; $('restart').disabled = !current;
   $('play-label').textContent = current && !current.video.paused ? 'Pause' : current?.video.ended ? 'Replay example' : 'Play example';
 }
 function playCurrent() {
-  if (!ready || !current) return;
+  if (!current) return;
   const video = current.video; if (video.ended) video.currentTime = 0;
   video.play().catch(() => message('Press the video’s play button to begin.')); controls();
 }
 function selectSample(id, autoplay = true) {
-  if (!ready || !prepared.has(id)) return;
-  if (current) { current.video.pause(); $('preload-bin').append(current.video); }
-  current = prepared.get(id); renderKey = ''; const {sample, video} = current;
-  video.currentTime = 0; video.playbackRate = Number($('playback-speed').value); $('video-stage').append(video);
-  $('video-name').textContent = sample.title; $('selected-category').textContent = sample.category;
+  if (!prepared.has(id)) return;
+  player.pause(); current = {...prepared.get(id), video: player}; renderKey = '';
+  const {sample, source} = current;
+  player.src = source; player.poster = sample.poster; player.hidden = false;
+  player.setAttribute('aria-label', sample.title); player.load(); player.playbackRate = Number($('playback-speed').value);
+  $('prepare-cover').hidden = true; $('video-name').textContent = sample.title; $('selected-category').textContent = sample.category;
   $('reference-line').hidden = !sample.reference; $('reference-text').textContent = sample.reference || '';
   $('selected-position').textContent = `${String(samples.findIndex(s => s.id === id) + 1).padStart(2, '0')} / ${samples.length}`;
   document.querySelectorAll('.sample-card').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.id === id)));
@@ -138,16 +162,47 @@ function buildLibrary() {
   samples.forEach((sample, index) => {
     const button = document.createElement('button'); button.className = 'sample-card'; button.dataset.id = sample.id; button.dataset.category = sample.category; button.disabled = true; button.setAttribute('aria-pressed', 'false'); button.setAttribute('aria-label', `Play ${sample.category}: ${sample.title}`);
     const frame = document.createElement('div'); frame.className = 'sample-image'; const image = document.createElement('img'); image.src = sample.poster; image.alt = ''; image.decoding = 'async'; const icon = document.createElement('span'); icon.className = 'sample-play'; icon.textContent = '▶'; icon.setAttribute('aria-hidden', 'true'); const duration = document.createElement('span'); duration.className = 'sample-duration'; duration.textContent = clock(sample.duration); frame.append(image, icon, duration);
-    const copy = document.createElement('div'); copy.className = 'sample-copy'; const tag = document.createElement('span'); tag.textContent = `${sample.category} / ${String(index + 1).padStart(2, '0')}`; const title = document.createElement('strong'); title.textContent = sample.title; copy.append(tag, title); button.append(frame, copy); button.addEventListener('click', () => selectSample(sample.id)); $('sample-grid').append(button);
+    const copy = document.createElement('div'); copy.className = 'sample-copy'; const tag = document.createElement('span'); tag.textContent = `${sample.category} / ${String(index + 1).padStart(2, '0')}`; const title = document.createElement('strong'); title.textContent = sample.title; copy.append(tag, title); const cacheState = document.createElement('small'); cacheState.className = 'sample-cache-state'; cacheState.textContent = 'Preparing…'; copy.append(cacheState); button.append(frame, copy); button.addEventListener('click', () => { if (prepared.has(sample.id)) selectSample(sample.id); else prepareSample(sample); }); $('sample-grid').append(button);
   });
   setCategory('ALL');
 }
 $('play').addEventListener('click', () => { if (!current) return; current.video.paused ? playCurrent() : current.video.pause(); });
 $('restart').addEventListener('click', () => { if (!current) return; current.video.currentTime = 0; render(0, true); playCurrent(); });
 $('playback-speed').addEventListener('change', () => { if (current) current.video.playbackRate = Number($('playback-speed').value); });
-$('retry').addEventListener('click', () => { samples.length ? prepareCollection() : initialize(); });
+$('retry').addEventListener('click', () => {
+  if (!samples.length) initialize();
+  else samples.filter(s => states.get(s.id) === 'error').forEach(prepareSample);
+});
+for (const name of ['timeupdate', 'seeking', 'seeked', 'pause', 'ended', 'ratechange', 'loadedmetadata']) {
+  player.addEventListener(name, () => { if (current) { if (name === 'loadedmetadata') player.playbackRate = Number($('playback-speed').value); render(player.currentTime); controls(); } });
+}
+player.addEventListener('play', () => { controls(); message(''); });
+player.addEventListener('error', () => {
+  if (!current || !player.error) return;
+  const {sample, source} = current; current = null; renderKey = '';
+  prepared.delete(sample.id); states.set(sample.id, 'error');
+  player.pause(); player.hidden = true; player.removeAttribute('src'); player.removeAttribute('poster'); player.load();
+  URL.revokeObjectURL(source);
+  $('prepare-cover').hidden = false; $('prepare-text').textContent = 'Choose another ready example, or retry this one.';
+  $('prediction-panel').dataset.event = ''; $('prediction-panel').dataset.predictionTime = ''; $('prediction-panel').dataset.mediaTime = '0';
+  $('prediction-event').textContent = 'Ready.'; $('prediction-description').textContent = 'Choose an example to begin.';
+  $('event-index').textContent = '— / 05'; $('event-sequence').replaceChildren();
+  $('system-state').textContent = '—'; $('system-state').classList.remove('responding');
+  $('media-clock').textContent = '00:00 / 00:00'; $('reference-line').hidden = true;
+  document.querySelectorAll('.sample-card').forEach(b => b.setAttribute('aria-pressed', 'false'));
+  message('This video could not be opened. Choose another ready example or retry this one.'); updateProgress();
+});
+function followPlayback() { if (current && !player.paused) render(player.currentTime); requestAnimationFrame(followPlayback); }
+requestAnimationFrame(followPlayback);
 async function initialize() {
-  try { const data = await fetchChecked('samples.json', 'json'); samples = Array.isArray(data) ? data : data.samples; if (!samples?.length) throw Error(); buildLibrary(); await prepareCollection(); }
-  catch { showPreparationError(); }
+  try {
+    const data = await getCollection(); samples = data.samples;
+    document.documentElement.dataset.release = RELEASE;
+    $('category-tabs').replaceChildren(); $('sample-grid').replaceChildren();
+    buildLibrary(); await prepareCollection();
+  } catch {
+    $('cache-status').className = 'cache-status failed'; $('cache-label').textContent = 'The collection could not be loaded';
+    $('retry').hidden = false; $('retry').textContent = 'Retry'; $('prepare-text').textContent = 'Please retry the connection.';
+  }
 }
 initialize();
