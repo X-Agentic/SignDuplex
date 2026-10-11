@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://signduplex-demo.brown-charm-3727.chatgpt.site/?v=examples25-20261011#demo"><b>Demo ↗</b></a> &nbsp; / &nbsp;
+  <a href="https://signduplex-demo.brown-charm-3727.chatgpt.site/?v=transitions-20261011#demo"><b>Demo ↗</b></a> &nbsp; / &nbsp;
   <a href="#method">Method</a> &nbsp; / &nbsp;
   <a href="#results">Results</a> &nbsp; / &nbsp;
   <a href="#signturn">SignTurn</a> &nbsp; / &nbsp;
@@ -34,7 +34,7 @@
 
 ## Demo
 
-**[Open the review samples ↗](https://signduplex-demo.brown-charm-3727.chatgpt.site/?v=examples25-20261011#demo)**
+**[Open the review samples ↗](https://signduplex-demo.brown-charm-3727.chatgpt.site/?v=transitions-20261011#demo)**
 
 Explore sample videos grouped into the five interaction-event categories: **REJECT**, **INCOMPLETE**, **WAIT**, **COMPLETE**, and **BARGE**. Each clip includes recorded model predictions prepared in advance and synchronized with video playback.
 

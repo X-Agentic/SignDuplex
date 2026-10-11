@@ -9,7 +9,7 @@ const GROUPS = {
   INCOMPLETE: {title: 'Signing in progress', description: 'Follow an utterance as the signer continues.'},
   WAIT: {title: 'A pause within a turn', description: 'Brief holds and pauses before signing continues.'},
   COMPLETE: {title: 'The end of an utterance', description: 'Watch the transition as a signed turn comes to an end.'},
-  BARGE: {title: 'Signing during a response', description: 'A new utterance begins while the system is in the responding state.'}
+  BARGE: {title: 'Finish a turn. Begin another.', description: 'Follow a complete signed turn, then new signing that interrupts the response.'}
 };
 const DESCRIPTIONS = {
   REJECT: 'No response is needed for this movement.',

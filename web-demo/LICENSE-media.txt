@@ -1,6 +1,6 @@
 SignDuplex example collection — media credits
 
-The collection contains 20 How2Sign clips and 5 generated everyday-activity clips. Event timelines are recorded model predictions.
+The collection contains 20 How2Sign-based examples and 5 generated everyday-activity clips. Event timelines are recorded model predictions.
 
 How2Sign media — CC-BY-NC-4.0
 
@@ -9,7 +9,7 @@ Amanda Duarte, Shruti Palaskar, Lucas Ventura, Deepti Ghadiyaram, Kenneth DeHaan
 Source and copyright notice: https://how2sign.github.io/
 License: https://creativecommons.org/licenses/by-nc/4.0/
 
-Modifications: source sentence clips or existing Dev prefixes were normalized by the local demo; this package resizes the exact recorded-session input to 720-pixel width, re-encodes H.264/yuv420p, removes audio, and enables faststart. No frame was added or removed and no speed change was applied during packaging.
+Modifications: source sentence clips or existing Dev prefixes were normalized by the local demo. The five BARGE examples join two clips from the same original recording; some clips are trimmed at a resting boundary or end with a signing prefix. barge_4 includes a 0.8-second final-frame hold between turns. wait_2 omits the initial 0.667 seconds of its source; wait_5 extends an existing natural pause by 0.8 seconds using repeated hold frames. Event records were produced from these complete edited inputs. Packaging resizes the exact recorded-session input to 720-pixel width, re-encodes H.264/yuv420p, removes audio, and enables faststart without further frame additions, removals, or retiming.
 
 English sentences are source annotations. No endorsement by the dataset authors is implied.
 
