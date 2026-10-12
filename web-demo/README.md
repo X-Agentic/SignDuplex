@@ -1,8 +1,12 @@
 # SignDuplex video examples
 
-[Open the example collection](https://signduplex-demo.brown-charm-3727.chatgpt.site/?v=transitions-20261011#demo).
+[Open the example collection](https://x-agentic.github.io/SignDuplex/#demo).
 
 This static website includes 25 examples across five interaction events: 5 each for REJECT, INCOMPLETE, WAIT, COMPLETE, and BARGE. Each clip plays alongside its recorded model-event timeline. The five BARGE examples join clips from the same source recording and start in RECEIVING: a recorded COMPLETE is followed by BARGE when signing resumes, then further predictions. Two WAIT examples show a hold followed by continued signing.
+
+## Hosting
+
+The public demo is served directly from this repository on GitHub Pages. The `Publish SignDuplex demo` workflow publishes `web-demo/` when its files change on `main`; it can also be run manually. Visitors do not need a ChatGPT account or a running inference server.
 
 ## Playback and release binding
 
