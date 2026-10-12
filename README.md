@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://x-agentic.github.io/SignDuplex/#demo"><b>Demo ↗</b></a> &nbsp; / &nbsp;
+  <a href="https://x-agentic.github.io/SignDuplex/?v=playback-20261012#demo"><b>Demo ↗</b></a> &nbsp; / &nbsp;
   <a href="#method">Method</a> &nbsp; / &nbsp;
   <a href="#results">Results</a> &nbsp; / &nbsp;
   <a href="#signturn">SignTurn</a> &nbsp; / &nbsp;
@@ -34,7 +34,7 @@
 
 ## Demo
 
-**[Open the review samples ↗](https://x-agentic.github.io/SignDuplex/#demo)**
+**[Open the review samples ↗](https://x-agentic.github.io/SignDuplex/?v=playback-20261012#demo)**
 
 Explore sample videos grouped into the five interaction-event categories: **REJECT**, **INCOMPLETE**, **WAIT**, **COMPLETE**, and **BARGE**. Each clip includes recorded model predictions prepared in advance and synchronized with video playback.
 

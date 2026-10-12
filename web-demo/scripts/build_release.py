@@ -14,6 +14,7 @@ for sample in samples:
   destination.write_bytes(raw)
  sample['file']=item['file']=str(destination.relative_to(root))
  item['bytes']=len(raw);item['sha256']=sha
+ item['sources']=[item['file'], *manifest.get('media_mirrors',{}).get(sha,[])]
  item['poster']='data:image/jpeg;base64,'+base64.b64encode((root/sample['poster']).read_bytes()).decode()
  item['record']=json.loads((root/sample['recording']).read_text())
  entries.append(item)
@@ -32,8 +33,10 @@ if old:old.decompose()
 script=soup.new_tag('script',id='example-data',type='application/json');script.string=payload;soup.body.append(script)
 script=soup.new_tag('script',src='assets/'+jsfile,defer='');soup.body.append(script)
 soup.html['data-release']=release
-soup.find(id='player-status').string='Choose an example when it is ready.'
-soup.find(id='prepare-text').string='Preparing the first example'
+soup.find(id='player-status').string='Choose any example to play.'
+soup.find(id='cache-label').string=f'{len(entries)} examples · choose any to play'
+soup.find(id='video-name').string='Choose an example'
+soup.find(id='prepare-text').string='Choose an example to begin'
 (root/'index.html').write_text(str(soup))
 # Retain immutable assets: previously cached entry documents must keep working
 # after future releases. Old aliases also remain available for compatibility.

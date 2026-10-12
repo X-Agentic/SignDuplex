@@ -1,6 +1,6 @@
 # SignDuplex video examples
 
-[Open the example collection](https://x-agentic.github.io/SignDuplex/#demo).
+[Open the example collection](https://x-agentic.github.io/SignDuplex/?v=playback-20261012#demo).
 
 This static website includes 25 examples across five interaction events: 5 each for REJECT, INCOMPLETE, WAIT, COMPLETE, and BARGE. Each clip plays alongside its recorded model-event timeline. The five BARGE examples join clips from the same source recording and start in RECEIVING: a recorded COMPLETE is followed by BARGE when signing resumes, then further predictions. Two WAIT examples show a hold followed by continued signing.
 
@@ -12,9 +12,13 @@ The public demo is served directly from this repository on GitHub Pages. The `Pu
 
 The entry page embeds one validated collection containing the example metadata, posters, and recorded predictions. JavaScript, CSS, and videos use content-addressed filenames, so a release selects matching resources. The runtime does not request the legacy `samples.json` URL. Previously published hash assets and the original video aliases are retained for cached entry pages.
 
-Videos prebuffer independently in four concurrent workers. Complete video bytes are checked against their expected length and, where Web Crypto is available, SHA-256. Each ready example can play immediately while other examples are still loading. An unavailable clip affects only that clip; playback does not wait for every clip or for hidden decoded frames.
+Every example is selectable as soon as the page renders. An uncached selection starts native MP4 playback immediately, using byte-range requests, without waiting for the collection or a complete-file JavaScript download. All videos and event records are generated before publication. First-time visitors still need to receive video bytes over their connection.
 
-The page uses a single visible video element. Its video clock drives the recorded events and system-state display through pause, seek, replay, and speed changes. Each resource request has a 16-second timeout and up to three attempts with a short backoff. Transient failures recover automatically; a failed example can be retried from its card or the retry button.
+A single background downloader saves complete, length- and SHA-256-verified videos in Cache Storage for reuse across visits. Cached clips play from local Blob URLs. Storage denial or a failed background download does not disable playback. A new selection cancels lower-priority downloads; playback receives bandwidth first. Background transfers time out only after receiving no data, so a progressing slow transfer is not discarded after 16 seconds.
+
+Each media hash has an immutable jsDelivr mirror pinned to the source commit. The player switches sources automatically on an error or a stalled transfer and resumes at the current timestamp. Mirror candidates live in `samples.json` under `media_mirrors`, keyed by the complete SHA-256; changing a video cannot silently reuse an obsolete mirror. After publishing new videos, add mirrors from the commit containing those exact bytes and rebuild.
+
+The page uses one visible video element. Its clock drives recorded events and state through pause, seek, replay, and speed changes. Completing a background cache never replaces the source of a video already playing.
 
 ## Preview
 
