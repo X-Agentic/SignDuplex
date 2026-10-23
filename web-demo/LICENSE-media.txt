@@ -13,7 +13,7 @@ Modifications: source sentence clips or existing Dev prefixes were normalized by
 
 English sentences are source annotations. No endorsement by the dataset authors is implied.
 
-Background edit (2026-10-23): the 20 INCOMPLETE, WAIT, COMPLETE and BARGE examples have their green-screen backgrounds replaced with generated everyday indoor scenes. The original foreground, frame order and playback timing are retained. Recorded event predictions remain unchanged from the original videos; they were not recomputed after the background edit. The 5 REJECT clips are unchanged.
+Background edit (2026-10-23): the 20 INCOMPLETE, WAIT, COMPLETE and BARGE examples have their green-screen backgrounds replaced with generated everyday scenes. The reusable background pool contains 24 scenes, including 20 new scenes covering all 15 requested environment categories; scene details and generation prompts are recorded in backgrounds/catalog.json. The original foreground, frame order and playback timing are retained. Recorded event predictions remain unchanged from the original videos; they were not recomputed after the background edit. The 5 REJECT clips are unchanged.
 
 
 Generated everyday-activity clips

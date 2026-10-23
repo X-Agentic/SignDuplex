@@ -1,0 +1,523 @@
+{
+  "schema": 1,
+  "version": "scene-pool-20261023",
+  "total_scenes": 24,
+  "new_scenes": 20,
+  "active_examples": 20,
+  "covered_requested_categories": [
+    "交通站点",
+    "公共交通",
+    "公共服务",
+    "公园",
+    "城市空间",
+    "工作",
+    "文化旅游",
+    "校园",
+    "汽车",
+    "自然",
+    "街道",
+    "购物便民",
+    "运动",
+    "露营度假",
+    "餐饮"
+  ],
+  "description": "Generated background plates for the existing recorded examples. Signer motion and recorded predictions are unchanged.",
+  "scenes": [
+    {
+      "id": "car_passenger",
+      "category": "汽车",
+      "name_zh": "停稳汽车副驾驶",
+      "lighting": "柔和白天",
+      "image": "car_passenger.f8cd554de9ee.jpg",
+      "sha256": "f8cd554de9ee45b69544c765016aa1a1af42e8a67b6e0a5e5b33ae3838f22074",
+      "source_png_sha256": "f58e05736f0da9a3178fd2200bccef5fd41e9e49b811ef4a8bc41a058d82b3c5",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [
+        "incomplete_1"
+      ],
+      "retained_from_previous_version": false,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Asset: empty photographic background plate for compositing an unchanged seated adult sign-language speaker, landscape 16:9. Scene: front passenger position of a comfortably spacious parked private car in daylight, camera fixed near dashboard facing backward toward the empty passenger seat, side window on right showing a quiet leafy urban street. Passenger seatback centered low behind the future person's torso, generous clear headroom, subtle headrest behind head. Recognizable natural car interior, realistic neutral gray upholstery and side door. Frame for seated adult medium shot, eye-level camera, natural 35mm perspective. Central 45 percent kept calm and free for head, shoulders, active hands; seatback entirely behind future person, no seatbelt or steering wheel crossing central foreground. Soft diffuse daylight through windows matching a normally lit studio person, no strong color cast. Absolutely no people, body parts, readable writing, branding, logos, watermark, foreground objects, artificial bokeh, or illustration. Photographic lived-in materials, moderate depth of field. Entire car is safely parked.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "campus_library",
+      "category": "校园",
+      "name_zh": "图书馆阅读区",
+      "lighting": "Diffuse daylight from large side windows",
+      "image": "campus_library.e098c06d73c5.jpg",
+      "sha256": "e098c06d73c51f3cb4cf7954fbdd793e4ad6222968b9d406f40eb27b3801ea35",
+      "source_png_sha256": "3b68a42802a9875e718fc7335cf36de1ab962ba0e2562a026646dda6d3892d7b",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [
+        "incomplete_2"
+      ],
+      "retained_from_previous_version": false,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Asset type: EMPTY video background plate, 1920x1080 landscape, exact 16:9. An ordinary university library reading area. Tall wood bookshelves form side and back walls, and rows of distant reading desks remain well behind the central composition. Large side windows offer soft daytime illumination. Slight background optical softness makes book spines illegible. Quiet empty circulation area in front; the scene reads clearly as a campus library, not a home study. Camera fixed horizontally at a seated adult's eye level, normal 45mm lens perspective. Central 45 percent is visually quiet enough for the hands and head of a later composited sign-language presenter. Everyday realistic materials, documentary photograph, balanced soft diffuse light and neutral color, no stylized grading or dramatic shadows. Absolutely no people, human silhouettes, body parts, chair in the near foreground, readable text, logos, signage or watermark. No object or furniture crossing the central foreground. Generate only the empty environment.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "sidewalk_shopfront",
+      "category": "街道",
+      "name_zh": "街边店铺门口",
+      "lighting": "明亮阴天",
+      "image": "sidewalk_shopfront.6da2e3fc622c.jpg",
+      "sha256": "6da2e3fc622c59ca3693ce6b55d17cb8d350808820f4a42c5c01baf6a0892a8d",
+      "source_png_sha256": "76c9b04bd26868e6cd073130fac2c3e654860c3d0699da474a4c07fc0a15716c",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [
+        "incomplete_3"
+      ],
+      "retained_from_previous_version": false,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Asset type: empty photographic background plate for an unchanged seated adult sign-language video. Generate ONE landscape 16:9 photograph, 2048x1152 preferred. Scene: a quiet everyday pedestrian sidewalk beside small neighborhood shopfronts, bright overcast daytime; a fabric shop awning at upper side, windows and pale textured shop walls, paving leads back into the distance. Recognizably a streetside shop entrance and sidewalk, not an indoor room. Camera fixed at seated adult eye height, level normal 45mm lens, medium-distance background. Central 45 percent of image is visually quiet soft pale walkway and softly focused distant storefront, no foreground furniture or obstacles, room for a seated person's torso and wide hand movements to be composited later. Background depth is natural and moderately focused, authentic photographic textures, no cinematic lighting. Lighting diffuse neutral daylight suitable for a softly lit studio foreground. Absolutely empty scene: no people, no body parts, no vehicles close to camera, no readable text, no logos or watermark. Do not generate the signer or any person.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "cafe_terrace",
+      "category": "餐饮",
+      "name_zh": "露天咖啡馆",
+      "lighting": "清晨遮阴",
+      "image": "cafe_terrace.5b8a9018b473.jpg",
+      "sha256": "5b8a9018b473a4b22d736efb416579e504b5e381d43a705af200ce0b23c4382b",
+      "source_png_sha256": "547f7a02f36032ff70422bda7e0414ca84d431c3554e5c36f8618955edd8d305",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [
+        "incomplete_4"
+      ],
+      "retained_from_previous_version": false,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Generate one empty photographic background plate, landscape 16:9. Scene: outdoor neighborhood cafe terrace in soft morning shade, awning overhead at upper edge, small cafe tables and rattan chairs on side edges and behind future subject, potted plants and quiet pedestrian lane farther back, glazed cafe doorway off to side. Intended for an unchanged seated sign-language adult composited in center. Camera at seated adult eye level, natural medium-shot perspective with spacious unobstructed central 45 percent for head torso and full hand gestures. Absolutely no table, chair, plant or foregroundobject crossing the central foreground. Scene recognizable as cafe terrace rather than generic empty wall. Soft diffuse neutral daytime light with subtle warm materials, no harsh sunshine on subject area, realistic 35mm photographic natural scale, slight natural background depth. No people or body parts, no writing or menus, no readable signs, no brands, logos, watermark. Lived-in photorealistic everyday setting.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "park_lawn",
+      "category": "公园",
+      "name_zh": "树荫草地",
+      "lighting": "清晨柔光",
+      "image": "park_lawn.3c40feb247af.jpg",
+      "sha256": "3c40feb247af341e49a1b4a163523e6ab2870853b8f41d26eb577636661ac723",
+      "source_png_sha256": "ede212d9d2c42257ca3f40edbfca11055899baafcc326eda034bcdd36dbd77c8",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [
+        "incomplete_5"
+      ],
+      "retained_from_previous_version": false,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Asset type: empty background plate for an unchanged seated adult sign-language video. One landscape 16:9 realistic photograph, preferably 2048x1152. Scene: a welcoming public park's shaded grass in a bright soft morning, broad open lawn with mature trees at the sides, receding trees and a gently curving footpath far behind, tree canopy at upper edges. Perspective from a level camera at seated adult eye height with normal 45mm lens, moderate background depth, no extreme wide angle. Central 45 percent open quiet grass and distant soft foliage, free of trunks, furniture or foreground objects so a seated signer can be composited. Keep foreground exposure neutral soft open shade, natural balanced greens, real photographic bark and grass texture, no stylized cinematic color. Absolutely no people, animals, body parts, text, logos or watermarks. Do not depict a person or chair. Recognizably shady park lawn, not dense jungle.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "train_window",
+      "category": "公共交通",
+      "name_zh": "高铁靠窗座位",
+      "lighting": "明亮阴天",
+      "image": "train_window.3680ccf4d457.jpg",
+      "sha256": "3680ccf4d4573d2b73e913537c24cb0a0a3878a392adfdd0e60482aea6979daa",
+      "source_png_sha256": "cb0438e1273f3150ca08ce41a6e49fe05f2d7c5be0478b9ca1102851651c1bb5",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [
+        "wait_1"
+      ],
+      "retained_from_previous_version": false,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Empty photographic background plate, landscape 16:9, for unchanged seated adult sign-language speaker, medium shot at seated adult eye level. Scene: modern high-speed train window seat interior. Camera faces the empty seat from the opposite row, spacious headroom and a low-backed blue-gray train seat centered behind the future speaker torso, large window to the right with green countryside under bright overcast light, train wall panel and overhead luggage rack visible at upper side. Recognizable ordinary high speed train, natural materials, soft diffuse daylight, neutral exposure matching a softly lit studio subject. Central 45 percent quiet and unobstructed for signer head and moving hands. No table in central foreground, no high headrest dominating head area, no people or body parts, no readable text, logos or watermarks. Stationary photograph, no fake motion blur. Realistic natural 35mm field of view, natural perspective and scale, not ultra-wide. Photorealistic.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "airport_gate",
+      "category": "交通站点",
+      "name_zh": "机场登机口",
+      "lighting": "柔和白天",
+      "image": "airport_gate.830a94d16f1c.jpg",
+      "sha256": "830a94d16f1c512514f727e1bc78fb4baa30687607b6b3dcb3ae1a92f9b569b3",
+      "source_png_sha256": "b72015b47522c6f6536e1d7508642da2a18115fc516620c40a2ef71551ded64a",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [
+        "wait_2"
+      ],
+      "retained_from_previous_version": false,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Create an empty photographic background plate for an unchanged seated adult signer to be composited later. Landscape 16:9. Scene: airport departure gate waiting area in daylight, rows of black linked airport seats located well behind the foreground, wide windows showing a parked passenger aircraft outside in distance, overhead structural beams and gate architecture, calm modern terminal. Camera fixed at seated adult eye level, medium-shot compositing perspective with quiet open center 45 percent for head, torso and active hands. The camera is facing toward the distant background past a clear empty foreground, not looking at the back of a foreground chair. No chair/table/obstacle across bottom middle or main subject area. Soft broad neutral daylight, even gentle light, no dramatic backlit sun or colorcast. Realistic everyday photographic details, natural scale, moderate depth of field with recognizable setting. No people, body parts, readable signs or lettering, brands, watermarks or screens with text.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "rain_bus_shelter",
+      "category": "交通站点",
+      "name_zh": "雨天公交候车亭",
+      "lighting": "雨天屋檐下",
+      "image": "rain_bus_shelter.99349a2d3009.jpg",
+      "sha256": "99349a2d3009f689c5fd87e0b6b3ccb41b7967190d572d92864527cfec79a2e1",
+      "source_png_sha256": "90d66a2cbb40c7ce830ab5818e5dd42bb72ac851d18365f63f5c6a0bdb4bea29",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [
+        "wait_3"
+      ],
+      "retained_from_previous_version": false,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Empty photorealistic background plate landscape 16:9 for compositing an unchanged seated adult sign-language speaker in the center later. Scene: under the dry roof of an ordinary glass bus waiting shelter on a rainy day, looking outward past the open shelter edge toward a wet quiet urban street, blurred distant parked vehicles, trees and low shop buildings. Shelter roof edge visible top, slim structural posts at far frame sides and a narrow shelter bench far behind on one side, wet pavement reflections beyond shelter. No pole, bench, foregroundtable or obstruction through central 45 percent reserved for speaker head torso and moving hands. Camera fixed at seated adult eye level and natural medium-shot scale, soft diffuse neutral overcast light matching a softly lit studio subject. Camera and future subject are dry under roof; light rainy atmosphere only outside, no rain streaks covering foreground lens or central subject. Clear recognizable sheltered bus stop context. No people, body parts, readable signs or writing, logos, watermarks, dramatic cinematic lighting.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "hospital_waiting",
+      "category": "公共服务",
+      "name_zh": "医院候诊区",
+      "lighting": "Soft neutral daytime window light",
+      "image": "hospital_waiting.cce9e0999c87.jpg",
+      "sha256": "cce9e0999c872e00c5b1cb6cff0a2d99174a7ccac3b8b7707e72b87e28c8d2b5",
+      "source_png_sha256": "f79801980a5eec852f5e36950c71d96a9298f8c604f124ac15ef3a0b50fdda12",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [
+        "wait_4"
+      ],
+      "retained_from_previous_version": false,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Asset type: EMPTY video background plate, 1920x1080 landscape, exact 16:9. An ordinary modern community hospital waiting area, empty and calm. Pale clean walls, large windows, practical modular teal-blue waiting benches positioned behind the future subject at the sides of the room, a clean corridor extending into the distance. A discreet unmarked reception alcove far behind helps identify the clinical setting. No emergency, no medical procedure, no instruments, no bedside scene. The nearest center of the room stays clear. Documentary realism; simple public healthcare environment. Camera fixed horizontally at a seated adult's eye level, normal 45mm lens perspective. Central 45 percent is visually quiet enough for the hands and head of a later composited sign-language presenter. Everyday realistic materials, documentary photograph, balanced soft diffuse light and neutral color, no stylized grading or dramatic shadows. Absolutely no people, human silhouettes, body parts, chair in the near foreground, readable text, logos, signage or watermark. No object or furniture crossing the central foreground. Generate only the empty environment.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "lake_shore",
+      "category": "自然",
+      "name_zh": "湖岸",
+      "lighting": "阴天柔光",
+      "image": "lake_shore.6db6c5561b03.jpg",
+      "sha256": "6db6c5561b03be13ee1cd68f58d1b0291fa4a38e956e8b4d8b8b3fb0a78b3ba5",
+      "source_png_sha256": "afde235ca1692a19b8958fa044f8e622bbe4948d6d3e18cc833a56bb6827b449",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [
+        "wait_5"
+      ],
+      "retained_from_previous_version": false,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Asset type: EMPTY landscape photographic background plate for compositing an unchanged seated sign-language speaker. Generate ONE 16:9 photograph, preferably 2048x1152. Scene: quiet natural lake shore on a bright overcast day, calm freshwater lake behind a broad flat gravel-and-grass shore, small reeds near the outer edges, distant wooded hills with soft atmospheric depth. Camera from seated picnic eye height with level horizon, normal 45mm lens, lake a few meters behind the imaginary subject. Central 45 percent calm low-detail water and empty near shoreline, no foreground table, seat, poles or close reeds crossing torso area. Lighting soft neutral diffuse daylight, fine authentic sand, stones, leaves and subtle water ripples, realistic photographic color and focus. No person, body part, boat, animal, text, logo or watermark; do not draw the signer. Recognizably a natural lake shore with distinct distant mountain contour, not an urban river or tropical resort. No dramatic sunlight or high contrast.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "open_office",
+      "category": "工作",
+      "name_zh": "开放式办公室",
+      "lighting": "Neutral overcast window daylight",
+      "image": "open_office.763a7b6fbd76.jpg",
+      "sha256": "763a7b6fbd7660b0975f66c41b88db92fbdf722f90e37a8a1fdb466fd421cc9b",
+      "source_png_sha256": "bfd7b465926dcd2e366ac9d2b81dc0b3f858dab44818bd43c5c4770514644959",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [
+        "complete_1"
+      ],
+      "retained_from_previous_version": false,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Asset type: EMPTY video background plate, 1920x1080 landscape, exact 16:9. An ordinary open-plan office with modest workstation rows at mid-distance and background, distant monitors angled away, pale partition dividers, large windows and a glass meeting room behind. Practical everyday workplace, not a luxury showroom. Clear foreground circulation space, no close desk or monitor. Soft overcast daytime window light fills the entire room. All furnishings remain behind a future central seated presenter. Camera fixed horizontally at a seated adult's eye level, normal 45mm lens perspective. Central 45 percent is visually quiet enough for the hands and head of a later composited sign-language presenter. Everyday realistic materials, documentary photograph, balanced soft diffuse light and neutral color, no stylized grading or dramatic shadows. Absolutely no people, human silhouettes, body parts, chair in the near foreground, readable text, logos, signage or watermark. No object or furniture crossing the central foreground. Generate only the empty environment.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "supermarket",
+      "category": "购物便民",
+      "name_zh": "超市货架旁",
+      "lighting": "Soft neutral diffuse overhead daylight",
+      "image": "supermarket.468d2b25f19a.jpg",
+      "sha256": "468d2b25f19ac8de15011149d35b303b4246fa22ed7331a524c3f48237c7f699",
+      "source_png_sha256": "adefcc12c97386a4830a51b681e64f3d7ee4db1e93a4e05949fde91c8e456d73",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [
+        "complete_2"
+      ],
+      "retained_from_previous_version": false,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Asset type: empty 16:9 video background plate, 1920x1080 wide landscape. Photograph inside an ordinary neighborhood supermarket beside its aisles, a modest open circulation corner in front of grocery shelves. Recognizable shelf rows of everyday packaged products at both sides and deeper background, soft defocus so packaging has no readable lettering. Camera locked at a seated adult's eye level, normal 45 mm perspective, facing the room horizontally. The central 45% is calm open mid-distance space so a seated sign-language presenter can later be composited there. No near foreground counter, chair, shopping trolley, obstacle, human, body part or silhouette. Ordinary realistic materials and subtle wear, not a showroom. Soft neutral diffuse overhead daylight, no dramatic contrast or hard shadows, believable documentary photograph. All furnishings and goods remain behind the future presenter, not across their hands. No logos, readable text, signs, watermark. Generate only the empty environment, no person.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "riverside",
+      "category": "城市空间",
+      "name_zh": "滨河步道",
+      "lighting": "傍晚柔光",
+      "image": "riverside.bbba675130d0.jpg",
+      "sha256": "bbba675130d05e0981a4e34fc16d6473e24bae837d1e5ca2f38e3aac37b8e4e8",
+      "source_png_sha256": "0b030b7efe60f56e0b0c1db5e94b764e770588dfe110127c0ef05011dd10959a",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [
+        "complete_3"
+      ],
+      "retained_from_previous_version": false,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Asset type: EMPTY photographic background plate for compositing an unchanged seated adult signing. Generate one landscape 16:9 photograph, preferably 2048x1152. Scene: a contemporary urban riverside promenade in soft late-afternoon open shade; broad pale paved footpath, low dark metal riverside railing behind subject distance, blue-grey river beyond, trees and restrained distant city skyline. Small empty wooden benches far to the side establish everyday public space. Camera at seated adult eye height, level normal 45mm lens, not aerial. Leave central 45 percent quiet and uncluttered, no furniture or foreground obstacles across where torso/hands will be composited. River and railing remain in the background several meters away. Real photographic textures, soft neutral diffuse lighting matched to a softly studio-lit person; slightly warm late afternoon distance, not strong sunset cast. Empty location: no people, body parts, readable text, logos, watermarks, no generated signer. Recognizably riverside city promenade; natural realistic perspective.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "museum",
+      "category": "文化旅游",
+      "name_zh": "博物馆展厅",
+      "lighting": "Soft diffused skylight and subtle exhibition lighting",
+      "image": "museum.da39e8309ed7.jpg",
+      "sha256": "da39e8309ed781467836e7c09d138cdb5eb3cf6238b6ba45348b1e208659b4e7",
+      "source_png_sha256": "6d10c5b149887d50501bf9667117ff0d41ef294ad11675bdd8a1c93b8601d006",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [
+        "complete_4"
+      ],
+      "retained_from_previous_version": false,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Asset type: EMPTY video background plate, 1920x1080 landscape, exact 16:9. A quiet public museum gallery with pale warm plaster walls, polished neutral stone flooring, an abstract stone sculpture on a plinth deep to the left and a distant glass exhibition case at the right. A restrained landscape artwork hangs on a far wall, no plaques or labels. Wide uncluttered circulation area in the foreground. Recognizably a museum, ordinary civic institution rather than palatial luxury. Subtle soft skylight and ceiling museum illumination; no dramatic spotlight pools. Camera fixed horizontally at a seated adult's eye level, normal 45mm lens perspective. Central 45 percent is visually quiet enough for the hands and head of a later composited sign-language presenter. Everyday realistic materials, documentary photograph, balanced soft diffuse light and neutral color, no stylized grading or dramatic shadows. Absolutely no people, human silhouettes, body parts, chair in the near foreground, readable text, logos, signage or watermark. No object or furniture crossing the central foreground. Generate only the empty environment.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "basketball_sideline",
+      "category": "运动",
+      "name_zh": "篮球场边",
+      "lighting": "Overcast diffuse daylight under a sideline cover",
+      "image": "basketball_sideline.7b17c54001a4.jpg",
+      "sha256": "7b17c54001a4a9787b3db1fa49ccc3c45491d77411937ee50968a011f07228e4",
+      "source_png_sha256": "574976e3a67dd9c306185cda218f809e11ed9b99318600b3723c0e8fcdcd427d",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [
+        "complete_5"
+      ],
+      "retained_from_previous_version": false,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Asset type: EMPTY video background plate, 1920x1080 landscape, exact 16:9. A realistic ordinary outdoor neighborhood basketball court seen from its covered sideline seating area on an overcast day. Static camera at a seated adult's eye height, normal 45mm perspective, facing horizontally across the court. The court surface with familiar basketball lines occupies the middle distance, a hoop and backboard stand off center in the right background, low perimeter fence and trees beyond. A simple roof overhang is barely visible at the upper frame edge, giving soft even shaded light compatible with an indoor-lit seated presenter. Clear unobstructed foreground, center 45 percent quiet for later compositing a person and signing hands. No foreground bench, chair, table, net or railing to cross the subject; all fencing is distant. Realistic worn sports court materials and subdued natural colors, documentary photo, no luxury architecture or dramatic lighting. Absolutely no people, athletes, human silhouettes, body parts, readable text, signs, logos or watermark. Only the empty setting; do not add a person.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "minivan_second_row",
+      "category": "汽车",
+      "name_zh": "商务车第二排",
+      "lighting": "明亮阴天",
+      "image": "minivan_second_row.2a12615c1642.jpg",
+      "sha256": "2a12615c16426da5bfb1ab9d62d30bd50a34c5f46384f2ba2de8e38300c6580a",
+      "source_png_sha256": "8dbd40052c816caca687f2b10ff2d2b60b85b05e7ad99d7cd0ae734e9376a780",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [
+        "barge_1"
+      ],
+      "retained_from_previous_version": false,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Generate a single empty photoreal photographic backdrop plate, landscape 16:9, for compositing a seated sign-language adult later. Scene: second passenger row of a stationary spacious business minivan. Camera faces backward toward an empty second-row captain seat, from the first-row gap at seated adult eye level. Center seatback in muted gray fabric behind future torso, headrest small rather than filling head area, generous headroom and cabin space. Large side window at right shows quiet tree-lined parking area under soft overcast daylight; third passenger row and other cabin seat visible behind on left, recognizable van sliding-door interior. Foreground central 45 percent free of steering wheel, seatbelts, tray tables, obstacles or objects. Soft neutral diffuse illumination matching studio person, realistic 35mm medium-shot framing, ordinary everyday materials, natural scale, no dramatic wide-angle distortion. No humans, body parts, readable text, brands, logos, watermarks. Safe parked vehicle.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "subway",
+      "category": "公共交通",
+      "name_zh": "地铁车厢",
+      "lighting": "柔和白天",
+      "image": "subway.9538d016ceb0.jpg",
+      "sha256": "9538d016ceb098a981b19b16f74655bf1d4efcee07bccf6e78c01fb76a5ab32e",
+      "source_png_sha256": "54eadd5eadb485964924dc7d6be112c7537197d832e7d332aa59fcc3d2920a79",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [
+        "barge_2"
+      ],
+      "retained_from_previous_version": false,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Landscape 16:9 empty photographic background plate for a seated adult sign-language speaker composited later. Scene: recognizable modern subway train carriage, pale gray walls, cool blue upholstered bench along rear wall, side door on left and window on right, ceiling rails and hanging hand straps at far sides. Camera fixed at seated adult eye level facing the rear bench from opposite side of carriage, medium-shot environment. Central 45 percent remains clear for signer head torso and hands; any vertical grab poles must be at far frame edges, never across center. Bench low in composition behind future person's hips, no raised foreground chair, table or obstruction. Bright soft diffuse carriage lighting with neutral gentle daylight from windows, realistic clean transit materials, natural photographic scale and perspective, moderately detailed background without artificial blur. No people, body parts, advertising, readable signs, symbols, brands, logos, text or watermark.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "campsite",
+      "category": "露营度假",
+      "name_zh": "露营天幕下",
+      "lighting": "白天树荫",
+      "image": "campsite.57a667bd0100.jpg",
+      "sha256": "57a667bd01004ca814621f974892e41d2c2572a35edba194a51dea1246d997d2",
+      "source_png_sha256": "49342f18a0e478da3e32915e42c91da63477ba1caf1713e83c791e3e24d2ab0b",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [
+        "barge_3"
+      ],
+      "retained_from_previous_version": false,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Asset type: empty photographic backdrop for a seated adult sign-language video whose subject will be composited later. Generate ONE landscape 16:9 photo, preferably 2048x1152. Scene: an ordinary pleasant woodland campsite, photographed from beneath the edge of a cream camping tarp canopy on a bright daytime, a neat olive canvas dome tent several meters behind at left, a small wooden camping stool and kettle grouped far to right, tall trees and grassy clearing beyond. Camera fixed at seated adult eye height, level normal 45mm lens, believable scale. Keep central 45 percent empty open lawn and distant trees, canopy only along the very top, support poles and ropes at extreme outer sides. No table or furniture in front of or across central torso and hands region. Lighting natural neutral diffuse open shade under canopy suitable for compositing a softly studio-lit person. Real documentary photograph, moderate detail, authentic fabric and tree textures, no cinematic haze or artificial fantasy. No people, body parts, pets, text, logos or watermarks. Do not render a signer.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "beach",
+      "category": "自然",
+      "name_zh": "海滩",
+      "lighting": "柔和黄昏",
+      "image": "beach.c05577f96d40.jpg",
+      "sha256": "c05577f96d4070c89c633d217ff558d30747faf5a1ca2ec297fd54105e934bb6",
+      "source_png_sha256": "2d9ea730128afa6ceeeee8ea6216b5470887e784694e74b3e1d141fe0f7cf239",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [
+        "barge_4"
+      ],
+      "retained_from_previous_version": false,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Asset type: EMPTY photographic background plate for an unchanged seated adult sign-language speaker. Generate one realistic landscape 16:9 photograph, preferably 2048x1152. Scene: peaceful broad sandy beach beside a calm ocean at the beginning of golden hour, viewed from soft open shade near a modest beachside shelter; pale neutral sand in near and middle ground, gentle sea ripples, hazy headland far to one side, pale blue sky with light clouds. Camera level at seated adult eye height, normal 45mm lens, medium distance. Center 45 percent quiet sand and soft water, unobstructed for later compositing torso and moving hands. Soft late daylight with restrained warmth only in the distance; neutral diffuse foreground illumination, NOT a vivid orange sunset or silhouette. Real natural textures, understated photographic look, no artificial oversaturation. No people, animals, body parts, boats, beach chairs, umbrellas across the center, text, logos, or watermark. Do not generate a signer or any foreground object.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "botanical_garden",
+      "category": "公园",
+      "name_zh": "植物园花圃",
+      "lighting": "雨后清晨",
+      "image": "botanical_garden.f1729453424c.jpg",
+      "sha256": "f1729453424c058486ab24b352615362459745e806ec5179957c0ab6c577cca2",
+      "source_png_sha256": "4f876d008b9ac7041bd95cf1336f1f0ca2d42ef1367d8278acff70f200d02461",
+      "dimensions": [
+        1672,
+        940
+      ],
+      "used_by": [
+        "barge_5"
+      ],
+      "retained_from_previous_version": false,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Use case: photorealistic-natural. Asset type: EMPTY everyday photographic background plate behind an unchanged seated sign-language speaker. Generate one landscape 16:9 photograph, preferably 2048x1152. Scene: public botanical garden in a soft morning just after rain, a broad level light gravel path with tasteful low flower beds along both sides, wet leaves with gentle droplets, pink and white flowering plants, small shrubs and lush garden trees in the middle distance, subtle glass conservatory far off to one outer side. Camera at seated adult eye height with normal level 45mm lens. Central 45 percent quiet broad path and softly focused distant garden, absolutely no foreground flowers, furniture or obstacles covering a future torso or hand region. Light fresh diffused neutral morning daylight, not harsh sunny patches, natural wet texture without heavy rain. Real garden photography, restrained color, moderate background detail, no fantasy saturation. Empty environment with no people, animals, body parts, readable botanical labels, text, logos or watermarks. Do not generate a signer. Recognizably a botanical garden flower bed setting, not a plain park lawn.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "living_room",
+      "category": "原有室内",
+      "name_zh": "客厅",
+      "lighting": "柔和室内日光",
+      "image": "living_room.1a2d6930c079.jpg",
+      "sha256": "1a2d6930c079d9264ef350af54bb4c828b12b39d7505c5f7155bfd62168f4830",
+      "source_png_sha256": "a7f5c342a54125dbb078c4413f1d79f762530ebd40edf6febcc4b1ef1a4060c1",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [],
+      "retained_from_previous_version": true,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Create a photorealistic empty everyday living room background plate for compositing a seated sign-language presenter. 16:9 landscape. Camera is fixed level at the eye height of a seated adult, facing a wall roughly 2.5 meters away, natural normal lens perspective. Center 55% is a quiet warm off-white plaster wall, no furniture intersecting the middle foreground. At far left a softly lit window with linen curtains and part of a low oak console; at far right a modest sofa arm and houseplant. Comfortable real ordinary apartment, understated contemporary furniture, soft diffuse daylight, neutral color balance, no dramatic shadows. Floor visible only as a thin strip at bottom. Soft subtle optical background defocus, realistic photographic depth, not blurred mush. No people, hands, silhouettes, lettering, screens, text, logos, watermarks, foreground table or foreground chair. Output a single full-bleed background image, no margins or panels.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "study",
+      "category": "原有室内",
+      "name_zh": "书房",
+      "lighting": "柔和室内日光",
+      "image": "study.01fb6fbb6499.jpg",
+      "sha256": "01fb6fbb6499c10b4acd9c138ffebcb30c47ab26a5c8d481bb9269d44cfa9cfb",
+      "source_png_sha256": "c23488d05aa0c189bb974fa962135e4a56b4d8bdb9192afbaa316a87d2438877",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [],
+      "retained_from_previous_version": true,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Photorealistic 16:9 empty home study background plate, for compositing a seated adult sign-language presenter into the central foreground. Camera at seated eye height, locked off, natural 45mm lens, eye level horizontal view. Everyday real apartment study: quiet ivory central wall, simple small bookcase at far left holding books without readable text, a framed abstract print high on the wall to far right, part of a low desk and task lamp at far right edge, a small plant. Large open clear central 60%, no foreground furniture or chair, space naturally behind a seated presenter. Gentle diffuse neutral daylight, muted natural colors, moderate photographic background defocus, credible residential scale. No people, hands, mannequins, screens, text, logos or watermarks. Single full-bleed background photo.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "dining_room",
+      "category": "原有室内",
+      "name_zh": "居家餐厅",
+      "lighting": "柔和室内日光",
+      "image": "dining_room.4901afbb48ee.jpg",
+      "sha256": "4901afbb48eefcb8992e58111688d31e0edd4156d359e138116f5dbb88fd04b2",
+      "source_png_sha256": "7518836a0891c537a4cd62b025c9681c93f3fd15066e2dee50d4bd6d9c062771",
+      "dimensions": [
+        1672,
+        940
+      ],
+      "used_by": [],
+      "retained_from_previous_version": true,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Photorealistic single empty everyday indoor background for a seated video presenter: a comfortable modest home dining nook, landscape 16:9. Camera locked at seated adult eye height facing a wall, normal lens, natural realistic proportions. Clear central 65% of frame with warm pale taupe wall; at far left edge a portion of a compact dining table and two chairs in the background, at far right edge a wooden sideboard with a ceramic bowl and small leafy plant, a simple hanging paper shade high in upper left. All furniture behind future presenter, none across central foreground. Neutral diffuse daytime light, restrained muted palette and gentle photographic defocus, clean ordinary lived-in home, no luxury showroom. No people, no silhouettes, no hands, no screens, no readable writing, no logos, no watermark. Full-bleed photographic plate.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    },
+    {
+      "id": "office",
+      "category": "原有室内",
+      "name_zh": "办公角落",
+      "lighting": "柔和室内日光",
+      "image": "office.2cd1ca92e1f1.jpg",
+      "sha256": "2cd1ca92e1f12ea665ec982d5b4a832ad81ba0df588d01158c10178e1ce95b53",
+      "source_png_sha256": "6a035ea70e6c4fc1129968dadb2a15ffe4a3e9807ba3a80203be834748d3df24",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "used_by": [],
+      "retained_from_previous_version": true,
+      "generation_tool": "image_gen.imagegen (built-in)",
+      "prompt": "Photorealistic empty small everyday office meeting corner background plate. Landscape16:9, fixed eye-level camera at seated adult height, natural normal-lens geometry. Large clear pale blue-gray wall occupying central65% for a sign-language presenter to be composited in foreground. On far left a slim low cabinet with small potted plant; on far right a softly lit window with white roller blind, a modest wooden chair and end of a desk in the distant background. Quiet natural neutral daylight, modern practical ordinary workspace, subtle optical background blur, realistic textures. No people or body parts, no foreground furniture across center, no computer screen, no writing, no branding, no watermark. Single full-bleed photographic room image.",
+      "camera": "fixed",
+      "motion": "static background plate"
+    }
+  ]
+}
