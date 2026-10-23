@@ -64,8 +64,8 @@
       "id": "incomplete_1",
       "title": "Ongoing signing",
       "category": "INCOMPLETE",
-      "file": "media/incomplete_1.a1b1010d9b8d.mp4",
-      "poster": "posters/incomplete_1.d6534b2b7c1f.jpg",
+      "file": "media/incomplete_1.189f3f8c4b7b.mp4",
+      "poster": "posters/incomplete_1.63b83dbb296e.jpg",
       "recording": "recordings/incomplete_1.json",
       "duration": 5.0,
       "initial_state": "RECEIVING",
@@ -76,8 +76,8 @@
       "id": "incomplete_2",
       "title": "Continuous receiving",
       "category": "INCOMPLETE",
-      "file": "media/incomplete_2.e042767a9517.mp4",
-      "poster": "posters/incomplete_2.e447011afad2.jpg",
+      "file": "media/incomplete_2.5dd07232832c.mp4",
+      "poster": "posters/incomplete_2.cc67af27662d.jpg",
       "recording": "recordings/incomplete_2.json",
       "duration": 9.767,
       "initial_state": "RECEIVING",
@@ -88,8 +88,8 @@
       "id": "incomplete_3",
       "title": "Signing in progress",
       "category": "INCOMPLETE",
-      "file": "media/incomplete_3.4cb1b369d854.mp4",
-      "poster": "posters/incomplete_3.bab646bdc1f3.jpg",
+      "file": "media/incomplete_3.87c9789b18a6.mp4",
+      "poster": "posters/incomplete_3.743201c0dce9.jpg",
       "recording": "recordings/incomplete_3.json",
       "duration": 9.2,
       "initial_state": "RECEIVING",
@@ -100,8 +100,8 @@
       "id": "incomplete_4",
       "title": "Signing continues",
       "category": "INCOMPLETE",
-      "file": "media/incomplete_4.08230306acda.mp4",
-      "poster": "posters/incomplete_4.d8675d78a0d8.jpg",
+      "file": "media/incomplete_4.7d62cc2284d8.mp4",
+      "poster": "posters/incomplete_4.3f5744647504.jpg",
       "recording": "recordings/incomplete_4.json",
       "duration": 6.934,
       "initial_state": "RECEIVING",
@@ -112,8 +112,8 @@
       "id": "incomplete_5",
       "title": "An ongoing sequence",
       "category": "INCOMPLETE",
-      "file": "media/incomplete_5.09755d41db88.mp4",
-      "poster": "posters/incomplete_5.985bf74fb5cd.jpg",
+      "file": "media/incomplete_5.cde1f66e88bd.mp4",
+      "poster": "posters/incomplete_5.1dd74bdddf8a.jpg",
       "recording": "recordings/incomplete_5.json",
       "duration": 11.0,
       "initial_state": "RECEIVING",
@@ -124,8 +124,8 @@
       "id": "wait_1",
       "title": "Pause and resume",
       "category": "WAIT",
-      "file": "media/wait_1.67005f733064.mp4",
-      "poster": "posters/wait_1.1edef90819a8.jpg",
+      "file": "media/wait_1.9fe564fe6749.mp4",
+      "poster": "posters/wait_1.0af01cab2854.jpg",
       "recording": "recordings/wait_1.json",
       "duration": 11.434,
       "initial_state": "RECEIVING",
@@ -136,8 +136,8 @@
       "id": "wait_2",
       "category": "WAIT",
       "title": "A pause within signing",
-      "file": "media/wait_2.d8abe7879c6e.mp4",
-      "poster": "posters/wait_2.ec80627fca0e.jpg",
+      "file": "media/wait_2.79b562121444.mp4",
+      "poster": "posters/wait_2.099734704d76.jpg",
       "recording": "recordings/wait_2_transitions.json",
       "duration": 11.534,
       "initial_state": "RECEIVING",
@@ -148,8 +148,8 @@
       "id": "wait_3",
       "title": "Pause before response",
       "category": "WAIT",
-      "file": "media/wait_3.35e36d5d4932.mp4",
-      "poster": "posters/wait_3.b0f2d469b900.jpg",
+      "file": "media/wait_3.ce9ff1625605.mp4",
+      "poster": "posters/wait_3.b8b579d86280.jpg",
       "recording": "recordings/wait_3.json",
       "duration": 7.367,
       "initial_state": "RECEIVING",
@@ -160,8 +160,8 @@
       "id": "wait_4",
       "title": "A pause in the sequence",
       "category": "WAIT",
-      "file": "media/wait_4.1b6f60147997.mp4",
-      "poster": "posters/wait_4.37eb76bd7c0c.jpg",
+      "file": "media/wait_4.945f36516fe1.mp4",
+      "poster": "posters/wait_4.bec1e56ebc46.jpg",
       "recording": "recordings/wait_4.json",
       "duration": 9.467,
       "initial_state": "RECEIVING",
@@ -172,8 +172,8 @@
       "id": "wait_5",
       "category": "WAIT",
       "title": "Pause, then continue",
-      "file": "media/wait_5.80b8701811ed.mp4",
-      "poster": "posters/wait_5.5672709ec2c1.jpg",
+      "file": "media/wait_5.e364fa6e9740.mp4",
+      "poster": "posters/wait_5.eda7a4c38482.jpg",
       "recording": "recordings/wait_5_transitions.json",
       "duration": 8.6,
       "initial_state": "RECEIVING",
@@ -184,8 +184,8 @@
       "id": "complete_1",
       "title": "Sentence-ending detection",
       "category": "COMPLETE",
-      "file": "media/complete_1.8d73845de4e6.mp4",
-      "poster": "posters/complete_1.a26163e5eab5.jpg",
+      "file": "media/complete_1.4dff0cccfd4c.mp4",
+      "poster": "posters/complete_1.de2028438e52.jpg",
       "recording": "recordings/complete_1.json",
       "duration": 7.3,
       "initial_state": "RECEIVING",
@@ -196,8 +196,8 @@
       "id": "complete_2",
       "title": "End-of-turn response",
       "category": "COMPLETE",
-      "file": "media/complete_2.dc8b1c0e20c5.mp4",
-      "poster": "posters/complete_2.21f84bce5886.jpg",
+      "file": "media/complete_2.8dde741bd33f.mp4",
+      "poster": "posters/complete_2.3c07cc4e840c.jpg",
       "recording": "recordings/complete_2.json",
       "duration": 6.034,
       "initial_state": "RECEIVING",
@@ -208,8 +208,8 @@
       "id": "complete_3",
       "title": "Completion after a pause",
       "category": "COMPLETE",
-      "file": "media/complete_3.9ed7ce828baa.mp4",
-      "poster": "posters/complete_3.f5ee4d5062ef.jpg",
+      "file": "media/complete_3.1f1edad2ba2c.mp4",
+      "poster": "posters/complete_3.dd241c2cd900.jpg",
       "recording": "recordings/complete_3.json",
       "duration": 9.667,
       "initial_state": "RECEIVING",
@@ -220,8 +220,8 @@
       "id": "complete_4",
       "title": "Hands return to rest",
       "category": "COMPLETE",
-      "file": "media/complete_4.a1a4663cf4d6.mp4",
-      "poster": "posters/complete_4.7c9b2eb287c6.jpg",
+      "file": "media/complete_4.5a24a7b3823c.mp4",
+      "poster": "posters/complete_4.2abf7233db15.jpg",
       "recording": "recordings/complete_4.json",
       "duration": 4.834,
       "initial_state": "RECEIVING",
@@ -232,8 +232,8 @@
       "id": "complete_5",
       "title": "A transition at the end",
       "category": "COMPLETE",
-      "file": "media/complete_5.481efd25affb.mp4",
-      "poster": "posters/complete_5.dabb3147ee38.jpg",
+      "file": "media/complete_5.a5e7f1d48cf2.mp4",
+      "poster": "posters/complete_5.f6a7ff042bb6.jpg",
       "recording": "recordings/complete_5.json",
       "duration": 8.667,
       "initial_state": "RECEIVING",
@@ -244,8 +244,8 @@
       "id": "barge_1",
       "category": "BARGE",
       "title": "Finish, then interrupt",
-      "file": "media/barge_1.2d32f3c776c2.mp4",
-      "poster": "posters/barge_1.e49429ae9fce.jpg",
+      "file": "media/barge_1.83caf6fdd662.mp4",
+      "poster": "posters/barge_1.980a88f1a3eb.jpg",
       "recording": "recordings/barge_1_transitions.json",
       "duration": 7.167,
       "initial_state": "RECEIVING",
@@ -256,8 +256,8 @@
       "id": "barge_2",
       "category": "BARGE",
       "title": "A second signed turn",
-      "file": "media/barge_2.587e79be2761.mp4",
-      "poster": "posters/barge_2.a0ef63a94f00.jpg",
+      "file": "media/barge_2.8813cfc40501.mp4",
+      "poster": "posters/barge_2.f2f3bb05a9d1.jpg",
       "recording": "recordings/barge_2_transitions.json",
       "duration": 7.5,
       "initial_state": "RECEIVING",
@@ -268,8 +268,8 @@
       "id": "barge_3",
       "category": "BARGE",
       "title": "From completion to interruption",
-      "file": "media/barge_3.9cb0bcd3934d.mp4",
-      "poster": "posters/barge_3.a7bce7edf327.jpg",
+      "file": "media/barge_3.52579dd54fa4.mp4",
+      "poster": "posters/barge_3.52fc3a9a8863.jpg",
       "recording": "recordings/barge_3_transitions.json",
       "duration": 16.834,
       "initial_state": "RECEIVING",
@@ -280,8 +280,8 @@
       "id": "barge_4",
       "category": "BARGE",
       "title": "Two turns, one signer",
-      "file": "media/barge_4.cc30247ed911.mp4",
-      "poster": "posters/barge_4.81b48a267b3e.jpg",
+      "file": "media/barge_4.b4e1582f590d.mp4",
+      "poster": "posters/barge_4.1c0728b4e1bf.jpg",
       "recording": "recordings/barge_4_transitions.json",
       "duration": 14.667,
       "initial_state": "RECEIVING",
@@ -292,8 +292,8 @@
       "id": "barge_5",
       "category": "BARGE",
       "title": "Signing resumes during a response",
-      "file": "media/barge_5.1c2ae0580136.mp4",
-      "poster": "posters/barge_5.e49429ae9fce.jpg",
+      "file": "media/barge_5.b7cc0ed0fa91.mp4",
+      "poster": "posters/barge_5.2df757482918.jpg",
       "recording": "recordings/barge_5_transitions.json",
       "duration": 8.8,
       "initial_state": "RECEIVING",
@@ -436,6 +436,66 @@
     ],
     "1c2ae058013649225e70a5ad3028f96fc735b2904f2d59c7b0b6db4a4f12a234": [
       "https://cdn.jsdelivr.net/gh/X-Agentic/SignDuplex@a6f5a3945892b459272ef83992093ada5cae2fa0/web-demo/media/barge_5.1c2ae0580136.mp4"
+    ],
+    "189f3f8c4b7be98033c8b6e02554b27e7c2a3546672edbd76112dd9ded32759c": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/378118f9f7d6301d1aececb19c00fb6fe33ee360/web-demo/media/incomplete_1.189f3f8c4b7b.mp4"
+    ],
+    "5dd07232832c9bf0f3cc413a182a24e57e96869563e0373e8e03ce517ca164cc": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/378118f9f7d6301d1aececb19c00fb6fe33ee360/web-demo/media/incomplete_2.5dd07232832c.mp4"
+    ],
+    "87c9789b18a62d4d13b0a75a37df57e4959d2cbb63cef3d45d94aee391f6304d": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/378118f9f7d6301d1aececb19c00fb6fe33ee360/web-demo/media/incomplete_3.87c9789b18a6.mp4"
+    ],
+    "7d62cc2284d86de8e554b0778ef2f3660ed6ff5dae34c27d64139fdd24572d0c": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/378118f9f7d6301d1aececb19c00fb6fe33ee360/web-demo/media/incomplete_4.7d62cc2284d8.mp4"
+    ],
+    "cde1f66e88bd83d21ae9ebe45e2b810974a3ddbc4095172a64c7f69094438b20": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/378118f9f7d6301d1aececb19c00fb6fe33ee360/web-demo/media/incomplete_5.cde1f66e88bd.mp4"
+    ],
+    "9fe564fe67496a9111f329c12d1aaa5ce50611bb78e0820f13cc62fa2a7048b7": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/378118f9f7d6301d1aececb19c00fb6fe33ee360/web-demo/media/wait_1.9fe564fe6749.mp4"
+    ],
+    "79b5621214449ffc9e428e19dd721b0cea6cdf08dd0b2ac2ac32ad34643aced8": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/378118f9f7d6301d1aececb19c00fb6fe33ee360/web-demo/media/wait_2.79b562121444.mp4"
+    ],
+    "ce9ff16256057ae9db0a78be846a7c480ee8324abeeb518348694803e36e7174": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/378118f9f7d6301d1aececb19c00fb6fe33ee360/web-demo/media/wait_3.ce9ff1625605.mp4"
+    ],
+    "945f36516fe175e185caf4b414807282f80a5b159d38cef3cea231623ddd9b64": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/378118f9f7d6301d1aececb19c00fb6fe33ee360/web-demo/media/wait_4.945f36516fe1.mp4"
+    ],
+    "e364fa6e9740a763367467efba198e25e626a9eb7730e5ee21ab03b01429c7bb": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/378118f9f7d6301d1aececb19c00fb6fe33ee360/web-demo/media/wait_5.e364fa6e9740.mp4"
+    ],
+    "4dff0cccfd4cdbda892f0b74944be16be2257cfcc546ae3646bdc49b763ddfe4": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/378118f9f7d6301d1aececb19c00fb6fe33ee360/web-demo/media/complete_1.4dff0cccfd4c.mp4"
+    ],
+    "8dde741bd33f72872c38941e6d74a8174a4b90aad134574aec9fac3703c0d81b": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/378118f9f7d6301d1aececb19c00fb6fe33ee360/web-demo/media/complete_2.8dde741bd33f.mp4"
+    ],
+    "1f1edad2ba2c3880de6c6e0212d2869aacc3e982bba6d4b20fcc22e9b64fc6c2": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/378118f9f7d6301d1aececb19c00fb6fe33ee360/web-demo/media/complete_3.1f1edad2ba2c.mp4"
+    ],
+    "5a24a7b3823caf06edd7e697ae9e65f336cb6d78367c346a8508635a0302fcad": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/378118f9f7d6301d1aececb19c00fb6fe33ee360/web-demo/media/complete_4.5a24a7b3823c.mp4"
+    ],
+    "a5e7f1d48cf2cd8aa94ef2491bf6a05133ec922e5a62362f6e18543036d9e53f": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/378118f9f7d6301d1aececb19c00fb6fe33ee360/web-demo/media/complete_5.a5e7f1d48cf2.mp4"
+    ],
+    "83caf6fdd662aacb70849793a61c40becfbf40b14446f6f847f6f1666afbd912": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/378118f9f7d6301d1aececb19c00fb6fe33ee360/web-demo/media/barge_1.83caf6fdd662.mp4"
+    ],
+    "8813cfc4050156c895fa4e1c8bb2add1b9b894739038d64c340e2a8357f3728f": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/378118f9f7d6301d1aececb19c00fb6fe33ee360/web-demo/media/barge_2.8813cfc40501.mp4"
+    ],
+    "52579dd54fa4f30a663677e86784d9c8ca9024cb53ed12da0697b5ce0edf89d6": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/378118f9f7d6301d1aececb19c00fb6fe33ee360/web-demo/media/barge_3.52579dd54fa4.mp4"
+    ],
+    "b4e1582f590d4756cf99dc638cd4f6528bbf60fa8ebedfa3a617a0943b55c6f8": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/378118f9f7d6301d1aececb19c00fb6fe33ee360/web-demo/media/barge_4.b4e1582f590d.mp4"
+    ],
+    "b7cc0ed0fa9179a9db8924ff206e41871b15d6e1bbbbb355ca3788d0262db6b3": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/378118f9f7d6301d1aececb19c00fb6fe33ee360/web-demo/media/barge_5.b7cc0ed0fa91.mp4"
     ]
   }
 }
