@@ -1,0 +1,247 @@
+{
+  "initial_state": "RECEIVING",
+  "duration": 33.250975,
+  "source_type": "reference_labels",
+  "source_annotation": "annotations/review_08.txt",
+  "source_annotation_sha256": "500ad8ef2c64d6440a235bc2019774da2dcef2fab345cd813e0926f492bb8f99",
+  "records": [
+    {
+      "time": 1.0,
+      "time_text": "1",
+      "kind": "reference_label",
+      "event": "REJECT",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 2.0,
+      "time_text": "2",
+      "kind": "reference_label",
+      "event": "REJECT",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 3.0,
+      "time_text": "3",
+      "kind": "reference_label",
+      "event": "REJECT",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 4.0,
+      "time_text": "4",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 5.0,
+      "time_text": "5",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 6.0,
+      "time_text": "6",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 7.0,
+      "time_text": "7",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 8.0,
+      "time_text": "8",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 9.0,
+      "time_text": "9",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 10.0,
+      "time_text": "10",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 11.0,
+      "time_text": "11",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 12.0,
+      "time_text": "12",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 13.0,
+      "time_text": "13",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 14.0,
+      "time_text": "14",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 15.0,
+      "time_text": "15",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 16.0,
+      "time_text": "16",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 17.0,
+      "time_text": "17",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 18.0,
+      "time_text": "18",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 19.0,
+      "time_text": "19",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 20.0,
+      "time_text": "20",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 21.0,
+      "time_text": "21",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 22.0,
+      "time_text": "22",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 23.0,
+      "time_text": "23",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 24.0,
+      "time_text": "24",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 25.0,
+      "time_text": "25",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 26.0,
+      "time_text": "26",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 27.0,
+      "time_text": "27",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 28.0,
+      "time_text": "28",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 29.0,
+      "time_text": "29",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 30.0,
+      "time_text": "30",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 31.0,
+      "time_text": "31",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 32.0,
+      "time_text": "32",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 33.0,
+      "time_text": "33",
+      "kind": "reference_label",
+      "event": "COMPLETE",
+      "state_after": "RESPONDING"
+    },
+    {
+      "time": 33.233,
+      "time_text": "33.233",
+      "kind": "reference_label",
+      "event": "REJECT",
+      "state_after": "RECEIVING"
+    }
+  ]
+}

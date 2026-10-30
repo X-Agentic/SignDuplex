@@ -1,0 +1,195 @@
+{
+  "samples": [
+    {
+      "id": "review_01",
+      "category": "EXAMPLE",
+      "title": "Giving back to WaGUAA",
+      "file": "media/review_01.032658770847.mp4",
+      "poster": "posters/review_01.c24e7acb44cf.jpg",
+      "recording": "recordings/review_01_reference.json",
+      "duration": 26.528,
+      "initial_state": "RECEIVING",
+      "reference": "HELLO HELLO.  My name is Dean Sheridan. I recently joined the WaGUAA Board. I am the Secretary, I just recently joined the Board this year. I am Class of '82, graduated long ago. Now I feel it's time to give back to WaGUAA. Hope to see you someday soon!",
+      "source_type": "reference_labels",
+      "source_video": "0ElPjqY4Cq8.mp4",
+      "source_annotation": "annotations/review_01.txt",
+      "source_annotation_filename": "0ElPjqY4Cq8_3.txt",
+      "terminal_label_tolerance": 0.0334100335852225
+    },
+    {
+      "id": "review_02",
+      "category": "EXAMPLE",
+      "title": "ASL movies at the library",
+      "file": "media/review_02.29887f7956d2.mp4",
+      "poster": "posters/review_02.90e071e0c7e1.jpg",
+      "recording": "recordings/review_02_reference.json",
+      "duration": 39.682902,
+      "initial_state": "RECEIVING",
+      "reference": "Hello! On behalf of Watertown Public Library I am so excited to announce that we are bringing ASL movies into our foreign film collection. They are coded in ASL. If you know any other ASL movies, please let us know. This collection was paid for by a generous grant from Watertown Commission on Disability. ASL rocks!",
+      "source_type": "reference_labels",
+      "source_video": "0gzQAgjx39o.mp4",
+      "source_annotation": "annotations/review_02.txt",
+      "source_annotation_filename": "0gzQAgjx39o.txt",
+      "terminal_label_tolerance": 0.04
+    },
+    {
+      "id": "review_03",
+      "category": "EXAMPLE",
+      "title": "Comfort and pain",
+      "file": "media/review_03.4d23e0ca6c8a.mp4",
+      "poster": "posters/review_03.1f7ec63e02a8.jpg",
+      "recording": "recordings/review_03_reference.json",
+      "duration": 11.354558,
+      "initial_state": "RECEIVING",
+      "reference": "that problem aside you notice other not comfort pain any?",
+      "source_type": "reference_labels",
+      "source_video": "0k6USIJasZY.mp4",
+      "source_annotation": "annotations/review_03.txt",
+      "source_annotation_filename": "0k6USIJasZY.txt",
+      "terminal_label_tolerance": 0.03336666666666667
+    },
+    {
+      "id": "review_04",
+      "category": "EXAMPLE",
+      "title": "The invention of the TTY",
+      "file": "media/review_04.37e67728a3ac.mp4",
+      "poster": "posters/review_04.5e28dc8837cb.jpg",
+      "recording": "recordings/review_04_reference.json",
+      "duration": 10.890159,
+      "initial_state": "RECEIVING",
+      "reference": "1964.Two Deaf people invented the TTY.One was a physicist and one was a dentist.They worked together to create the TTY. Cool!",
+      "source_type": "reference_labels",
+      "source_video": "0kQEvxqIi4k.mp4",
+      "source_annotation": "annotations/review_04.txt",
+      "source_annotation_filename": "0kQEvxqIi4k_1.txt",
+      "terminal_label_tolerance": 0.03336666666666667
+    },
+    {
+      "id": "review_05",
+      "category": "EXAMPLE",
+      "title": "Independent learners",
+      "file": "media/review_05.50b1a63d7e3d.mp4",
+      "poster": "posters/review_05.cd2876b4777e.jpg",
+      "recording": "recordings/review_05_reference.json",
+      "duration": 14.884,
+      "initial_state": "RECEIVING",
+      "reference": "The reason why I teach is because I want children to see that they are capable of becoming a critic of their own thinking, so they can become independent learners.",
+      "source_type": "reference_labels",
+      "source_video": "1L560qaV9aM.mp4",
+      "source_annotation": "annotations/review_05.txt",
+      "source_annotation_filename": "1L560qaV9aM.txt",
+      "terminal_label_tolerance": 0.033296047725577926
+    },
+    {
+      "id": "review_06",
+      "category": "EXAMPLE",
+      "title": "Introducing the Deaf X Lab",
+      "file": "media/review_06.c8ee427e9a98.mp4",
+      "poster": "posters/review_06.482b34d44e55.jpg",
+      "recording": "recordings/review_06_reference.json",
+      "duration": 10.820499,
+      "initial_state": "RECEIVING",
+      "reference": "Hi. My name is Matt Dye. I am the director here at the deaf x lab.",
+      "source_type": "reference_labels",
+      "source_video": "304pyUWxDUs.mp4",
+      "source_annotation": "annotations/review_06.txt",
+      "source_annotation_filename": "304pyUWxDUs.txt",
+      "terminal_label_tolerance": 0.03333333333333333
+    },
+    {
+      "id": "review_07",
+      "category": "EXAMPLE",
+      "title": "Drinking-related injuries",
+      "file": "media/review_07.bb416d26dc22.mp4",
+      "poster": "posters/review_07.13f427067e66.jpg",
+      "recording": "recordings/review_07_reference.json",
+      "duration": 9.822041,
+      "initial_state": "RECEIVING",
+      "reference": "Question 9: Have you or someone else been injured as a result of your drinking?",
+      "source_type": "reference_labels",
+      "source_video": "3pGRATrswG0.mp4",
+      "source_annotation": "annotations/review_07.txt",
+      "source_annotation_filename": "3pGRATrswG0_2.txt",
+      "terminal_label_tolerance": 0.03333333333333333
+    },
+    {
+      "id": "review_08",
+      "category": "EXAMPLE",
+      "title": "An exhibit of Deaf history",
+      "file": "media/review_08.062bc54e4277.mp4",
+      "poster": "posters/review_08.42b0c626bcca.jpg",
+      "recording": "recordings/review_08_reference.json",
+      "duration": 33.250975,
+      "initial_state": "RECEIVING",
+      "reference": "Hello, My name is Michael Olson from the Gallaudet University archives. This exhibit includes good history. I\u2019m very proud. Here is 200 years worth of history at ASD and this is a wonderful exhibit. I really like it. I enjoy it very much. Thank you to CHS for making this exhibit possible.",
+      "source_type": "reference_labels",
+      "source_video": "3uzrcKJ2ciM.mp4",
+      "source_annotation": "annotations/review_08.txt",
+      "source_annotation_filename": "3uzrcKJ2ciM.txt",
+      "terminal_label_tolerance": 0.03333333333333333
+    },
+    {
+      "id": "review_09",
+      "category": "EXAMPLE",
+      "title": "Hiring Deaf and hard-of-hearing people",
+      "file": "media/review_09.8ae7e435c978.mp4",
+      "poster": "posters/review_09.fe03ad39a876.jpg",
+      "recording": "recordings/review_09_reference.json",
+      "duration": 20.29424,
+      "initial_state": "RECEIVING",
+      "reference": "The benefits of hiring deaf people, DeafBlind, hard of hearing, late deafened, people with disabilities: Hire Deaf, DeafBlind, DeafDisabled, and Hard of Hearing people today!",
+      "source_type": "reference_labels",
+      "source_video": "4rnPJ0fJNh8.mp4",
+      "source_annotation": "annotations/review_09.txt",
+      "source_annotation_filename": "4rnPJ0fJNh8.txt",
+      "terminal_label_tolerance": 0.04179725085910653
+    },
+    {
+      "id": "barge_3",
+      "category": "BARGE",
+      "title": "From completion to interruption",
+      "file": "media/barge_3.52579dd54fa4.mp4",
+      "poster": "posters/barge_3.52fc3a9a8863.jpg",
+      "recording": "recordings/barge_3_transitions.json",
+      "duration": 16.834,
+      "initial_state": "RECEIVING",
+      "reference": "This is a face shield that also has a respirator with it, and by wearing this, I don't have to wear this. Another thing I always use when I'm working in the shop is this air filter.",
+      "description": "COMPLETE at 9 s, BARGE at 10 s, then continued signing.",
+      "display_index": 10,
+      "source_type": "recorded_model_predictions",
+      "display_category": "EXAMPLE"
+    }
+  ],
+  "media_mirrors": {
+    "032658770847c3ee1b817f68a3b156e755131ac78e07132307fb3230a6ef49eb": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/main/web-demo/media/review_01.032658770847.mp4"
+    ],
+    "29887f7956d2e7afdff162819d845ca5faece3609eaabecf5c6215a7ff2f52b9": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/main/web-demo/media/review_02.29887f7956d2.mp4"
+    ],
+    "4d23e0ca6c8a448bd9eab2ea55ac6997e56d7633295b1915e81e7d293f346472": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/main/web-demo/media/review_03.4d23e0ca6c8a.mp4"
+    ],
+    "37e67728a3ac90710a30ef618d39dc853d71879cc65fc8c1793e1988a2fbafbb": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/main/web-demo/media/review_04.37e67728a3ac.mp4"
+    ],
+    "50b1a63d7e3d95181b08204ec35fd49827d642a6fb9132e7cd1afbf299afacb1": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/main/web-demo/media/review_05.50b1a63d7e3d.mp4"
+    ],
+    "c8ee427e9a98a9193407b83bbe88d218552df91196b231bdb650a437d4c2eea7": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/main/web-demo/media/review_06.c8ee427e9a98.mp4"
+    ],
+    "bb416d26dc2223291b08081fd45195745366d258dc5306b4406b4d2bd52f5e28": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/main/web-demo/media/review_07.bb416d26dc22.mp4"
+    ],
+    "062bc54e4277909a7ddf6d6128103b800ff4dd4443b1d92f8eb12aeb01222049": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/main/web-demo/media/review_08.062bc54e4277.mp4"
+    ],
+    "8ae7e435c97835046169e88dc84a401ce9a35ceb2185f94f1550775582fbf53f": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/main/web-demo/media/review_09.8ae7e435c978.mp4"
+    ],
+    "52579dd54fa4f30a663677e86784d9c8ca9024cb53ed12da0697b5ce0edf89d6": [
+      "https://raw.githubusercontent.com/X-Agentic/SignDuplex/main/web-demo/media/barge_3.52579dd54fa4.mp4"
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+Source: How2Sign — https://how2sign.github.io/
+License: CC-BY-NC-4.0 — https://creativecommons.org/licenses/by-nc/4.0/
+
+Source: Wan2.2-T2V-A14B — https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B#license-agreement
+License: The model is distributed under Apache-2.0; model authors do not claim rights over generated content.

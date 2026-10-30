@@ -1,0 +1,114 @@
+{
+  "initial_state": "RECEIVING",
+  "duration": 14.884,
+  "source_type": "reference_labels",
+  "source_annotation": "annotations/review_05.txt",
+  "source_annotation_sha256": "68793793f6d513ebb90182588be0a0b9646870eb8b3ec8cb2e9708c0f5cf8888",
+  "records": [
+    {
+      "time": 1.0,
+      "time_text": "1",
+      "kind": "reference_label",
+      "event": "REJECT",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 2.0,
+      "time_text": "2",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 3.0,
+      "time_text": "3",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 4.0,
+      "time_text": "4",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 5.0,
+      "time_text": "5",
+      "kind": "reference_label",
+      "event": "WAIT",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 6.0,
+      "time_text": "6",
+      "kind": "reference_label",
+      "event": "WAIT",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 7.0,
+      "time_text": "7",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 8.0,
+      "time_text": "8",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 9.0,
+      "time_text": "9",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 10.0,
+      "time_text": "10",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 11.0,
+      "time_text": "11",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 12.0,
+      "time_text": "12",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 13.0,
+      "time_text": "13",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 14.0,
+      "time_text": "14",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 14.9,
+      "time_text": "14.9",
+      "kind": "reference_label",
+      "event": "COMPLETE",
+      "state_after": "RESPONDING"
+    }
+  ]
+}

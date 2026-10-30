@@ -1,0 +1,93 @@
+{
+  "initial_state": "RECEIVING",
+  "duration": 11.354558,
+  "source_type": "reference_labels",
+  "source_annotation": "annotations/review_03.txt",
+  "source_annotation_sha256": "0f908f182963bc29ea18221d1dbed8f33caf78f2f3dee2b2585d229c98c096ca",
+  "records": [
+    {
+      "time": 1.0,
+      "time_text": "1",
+      "kind": "reference_label",
+      "event": "REJECT",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 2.0,
+      "time_text": "2",
+      "kind": "reference_label",
+      "event": "REJECT",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 3.0,
+      "time_text": "3",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 4.0,
+      "time_text": "4",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 5.0,
+      "time_text": "5",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 6.0,
+      "time_text": "6",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 7.0,
+      "time_text": "7",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 8.0,
+      "time_text": "8",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 9.0,
+      "time_text": "9",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 10.0,
+      "time_text": "10",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 11.0,
+      "time_text": "11",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 11.333,
+      "time_text": "11.333",
+      "kind": "reference_label",
+      "event": "COMPLETE",
+      "state_after": "RESPONDING"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "initial_state": "RECEIVING",
+  "duration": 9.822041,
+  "source_type": "reference_labels",
+  "source_annotation": "annotations/review_07.txt",
+  "source_annotation_sha256": "6efb7394926a64747a6c9961888d40b95231ce369e29c5693e2e78c1088e63e6",
+  "records": [
+    {
+      "time": 1.0,
+      "time_text": "1",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 2.0,
+      "time_text": "2",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 3.0,
+      "time_text": "3",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 4.0,
+      "time_text": "4",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 5.0,
+      "time_text": "5",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 6.0,
+      "time_text": "6",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 7.0,
+      "time_text": "7",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 8.0,
+      "time_text": "8",
+      "kind": "reference_label",
+      "event": "INCOMPLETE",
+      "state_after": "RECEIVING"
+    },
+    {
+      "time": 9.0,
+      "time_text": "9",
+      "kind": "reference_label",
+      "event": "COMPLETE",
+      "state_after": "RESPONDING"
+    },
+    {
+      "time": 9.8,
+      "time_text": "9.8",
+      "kind": "reference_label",
+      "event": "REJECT",
+      "state_after": "RECEIVING"
+    }
+  ]
+}

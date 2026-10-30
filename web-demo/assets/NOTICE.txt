@@ -1,0 +1,8 @@
+Institution marks identify the supplied paper's author affiliations.
+Tsinghua University emblem: original vector path from page 4 of
+https://www.env.tsinghua.edu.cn/qinghuadaxueerjidanweibiaozhiguifanshouce-shixing.pdf
+Huawei logo: original official mark from
+https://www.huawei.com/-/media/htemplate-home/1.0.1.20251205144752/components/assets/img/favicon-logo.svg
+Mark proportions, geometry and original colors are preserved.
+InstitutionChinese font: six-character subset of Noto Sans CJK SC,
+https://github.com/notofonts/noto-cjk under the SIL Open Font License 1.1.
