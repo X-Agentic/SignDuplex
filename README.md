@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://x-agentic.github.io/SignDuplex/?v=playback-20261012#demo"><b>Demo ↗</b></a> &nbsp; / &nbsp;
+  <a href="https://x-agentic.github.io/SignDuplex/?v=review-update-20261030#demo"><b>Demo ↗</b></a> &nbsp; / &nbsp;
   <a href="#method">Method</a> &nbsp; / &nbsp;
   <a href="#results">Results</a> &nbsp; / &nbsp;
   <a href="#signturn">SignTurn</a> &nbsp; / &nbsp;
@@ -34,7 +34,7 @@
 
 ## Demo
 
-**[Open the review samples ↗](https://x-agentic.github.io/SignDuplex/?v=playback-20261012#demo)**
+**[Open the review samples ↗](https://x-agentic.github.io/SignDuplex/?v=review-update-20261030#demo)**
 
 Explore 10 video examples covering **REJECT**, **INCOMPLETE**, **WAIT**, **COMPLETE**, and **BARGE**. Nine examples follow supplied reference annotations; the retained completion-to-interruption example uses recorded model predictions. Event timelines are synchronized with video playback.
 

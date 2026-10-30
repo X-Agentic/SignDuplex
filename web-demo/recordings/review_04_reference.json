@@ -3,13 +3,13 @@
   "duration": 10.890159,
   "source_type": "reference_labels",
   "source_annotation": "annotations/review_04.txt",
-  "source_annotation_sha256": "f766601682ff8ca6937bee703265af0a4c905f93c06bd81b6c64d0eb891082aa",
+  "source_annotation_sha256": "dc352a6a8e1f04602cb960b911544dee258441a747e8ced4c2942409853b44b6",
   "records": [
     {
       "time": 1.0,
       "time_text": "1",
       "kind": "reference_label",
-      "event": "REJECT",
+      "event": "INCOMPLETE",
       "state_after": "RECEIVING"
     },
     {

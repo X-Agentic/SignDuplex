@@ -3,13 +3,13 @@
   "duration": 14.884,
   "source_type": "reference_labels",
   "source_annotation": "annotations/review_05.txt",
-  "source_annotation_sha256": "68793793f6d513ebb90182588be0a0b9646870eb8b3ec8cb2e9708c0f5cf8888",
+  "source_annotation_sha256": "aca4deffa2e850004ed11eb7b9c8cbb441fcfc346d3e6a48fca46a61c9ed5d91",
   "records": [
     {
       "time": 1.0,
       "time_text": "1",
       "kind": "reference_label",
-      "event": "REJECT",
+      "event": "BARGE",
       "state_after": "RECEIVING"
     },
     {

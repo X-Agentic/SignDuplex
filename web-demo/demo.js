@@ -1,6 +1,6 @@
 'use strict';
-const RELEASE = 'collection-0ae10daccd9b';
-const COLLECTION_URL = 'assets/collection.7d3f41125fdc.json';
+const RELEASE = 'collection-0cb2c7de8e9e';
+const COLLECTION_URL = 'assets/collection.2e5969069065.json';
 const EXPECTED_COUNT = 10;
 const $ = id => document.getElementById(id);
 const GROUPS = {
