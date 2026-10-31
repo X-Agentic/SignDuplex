@@ -36,9 +36,7 @@
 
 **[Open the review samples ↗](https://x-agentic.github.io/SignDuplex/?v=review-update-20261030#demo)**
 
-Explore 10 video examples covering **REJECT**, **INCOMPLETE**, **WAIT**, **COMPLETE**, and **BARGE**. Nine examples follow supplied reference annotations; the retained completion-to-interruption example uses recorded model predictions. Event timelines are synchronized with video playback.
-
-Use the playback controls to pause, seek, or replay a moment and inspect its event timeline.
+Explore **10 video examples** covering **REJECT**, **INCOMPLETE**, **WAIT**, **COMPLETE**, and **BARGE**, with event labels synchronized to playback.
 
 ## Method
 
