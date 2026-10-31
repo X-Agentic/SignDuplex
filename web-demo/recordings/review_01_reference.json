@@ -9,7 +9,7 @@
       "time": 1.0,
       "time_text": "1",
       "kind": "reference_label",
-      "event": "REJECT",
+      "event": "INCOMPLETE",
       "state_after": "RECEIVING"
     },
     {
